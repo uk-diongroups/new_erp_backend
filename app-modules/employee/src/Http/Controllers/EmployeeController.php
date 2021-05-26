@@ -133,7 +133,7 @@ class EmployeeController extends Controller
 
     public function forgot_password(Request $request)
     {
-        
+
         $input = $request->all();
         $rules = array(
             'email' => "required|email",
