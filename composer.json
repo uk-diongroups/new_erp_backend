@@ -16,7 +16,10 @@
         "laravel/framework": "^8.40",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "modules/employee": "*"
+        "modules/department": "*",
+        "modules/designation": "*",
+        "modules/employee": "*",
+        "modules/hr": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

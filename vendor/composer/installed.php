@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '8f36b471099bd358ca09f21f36c796dde7a9673e',
+    'reference' => '3fd8399a72f81a9399bd8cc0321b4d74185d517c',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -508,25 +508,25 @@
       'aliases' => 
       array (
       ),
-      'reference' => '8f36b471099bd358ca09f21f36c796dde7a9673e',
+      'reference' => '3fd8399a72f81a9399bd8cc0321b4d74185d517c',
     ),
     'laravel/sail' => 
     array (
-      'pretty_version' => 'v1.6.0',
-      'version' => '1.6.0.0',
+      'pretty_version' => 'v1.7.0',
+      'version' => '1.7.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5d23474cd411b07f46980d05f9c38e7dc0d17460',
+      'reference' => 'd1f703d73f782af5427697cdc5023395cd341963',
     ),
     'laravel/sanctum' => 
     array (
-      'pretty_version' => 'v2.11.0',
-      'version' => '2.11.0.0',
+      'pretty_version' => 'v2.11.1',
+      'version' => '2.11.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => '3ed8f60dafef026acc21733366a08746a7bd176e',
+      'reference' => '5de9d0ced8ae50dacb00c16077115f32e94d13f2',
     ),
     'laravel/tinker' => 
     array (
@@ -573,6 +573,24 @@
       ),
       'reference' => 'd1339f64479af1bee0e82a0413813fe5345a54ea',
     ),
+    'modules/department' => 
+    array (
+      'pretty_version' => '1.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '69d9f5941d76581dafca8ba28794ccfca757d36e',
+    ),
+    'modules/designation' => 
+    array (
+      'pretty_version' => '1.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '42671fea84184215a1fe15415658a006163274fd',
+    ),
     'modules/employee' => 
     array (
       'pretty_version' => '1.0',
@@ -581,6 +599,15 @@
       array (
       ),
       'reference' => '441a0225aa9f2009a798bd688912b712f76557d6',
+    ),
+    'modules/hr' => 
+    array (
+      'pretty_version' => '1.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6addb66ff3e84c33d28ec90d58a574797cd12de7',
     ),
     'monolog/monolog' => 
     array (
@@ -613,12 +640,12 @@
     ),
     'nesbot/carbon' => 
     array (
-      'pretty_version' => '2.48.0',
-      'version' => '2.48.0.0',
+      'pretty_version' => '2.48.1',
+      'version' => '2.48.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd3c447f21072766cddec3522f9468a5849a76147',
+      'reference' => '8d1f50f1436fb4b05e7127360483dd9c6e73da16',
     ),
     'nikic/php-parser' => 
     array (

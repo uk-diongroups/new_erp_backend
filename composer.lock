@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "999dfd4441c5195760c6404b66f2cd77",
+    "content-hash": "22152881f05d97fc87595377e24c8820",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1624,16 +1624,16 @@
         },
         {
             "name": "laravel/sanctum",
-            "version": "v2.11.0",
+            "version": "v2.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
-                "reference": "3ed8f60dafef026acc21733366a08746a7bd176e"
+                "reference": "5de9d0ced8ae50dacb00c16077115f32e94d13f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/3ed8f60dafef026acc21733366a08746a7bd176e",
-                "reference": "3ed8f60dafef026acc21733366a08746a7bd176e",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/5de9d0ced8ae50dacb00c16077115f32e94d13f2",
+                "reference": "5de9d0ced8ae50dacb00c16077115f32e94d13f2",
                 "shasum": ""
             },
             "require": {
@@ -1684,7 +1684,7 @@
                 "issues": "https://github.com/laravel/sanctum/issues",
                 "source": "https://github.com/laravel/sanctum"
             },
-            "time": "2021-05-11T21:03:57+00:00"
+            "time": "2021-05-25T16:43:06+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2007,6 +2007,70 @@
             "time": "2021-01-18T20:58:21+00:00"
         },
         {
+            "name": "modules/department",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/department",
+                "reference": "69d9f5941d76581dafca8ba28794ccfca757d36e"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Department\\Providers\\DepartmentServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Department\\": "src/",
+                    "Modules\\Department\\Tests\\": "tests/",
+                    "Modules\\Department\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Department\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/designation",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/designation",
+                "reference": "42671fea84184215a1fe15415658a006163274fd"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Designation\\Providers\\DesignationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Designation\\": "src/",
+                    "Modules\\Designation\\Tests\\": "tests/",
+                    "Modules\\Designation\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Designation\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "modules/employee",
             "version": "1.0",
             "dist": {
@@ -2028,6 +2092,38 @@
                     "Modules\\Employee\\Tests\\": "tests/",
                     "Modules\\Employee\\Database\\Factories\\": "database/factories/",
                     "Modules\\Employee\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/hr",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/hr",
+                "reference": "6addb66ff3e84c33d28ec90d58a574797cd12de7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Hr\\Providers\\HrServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Hr\\": "src/",
+                    "Modules\\Hr\\Tests\\": "tests/",
+                    "Modules\\Hr\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Hr\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
@@ -2136,16 +2232,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.48.0",
+            "version": "2.48.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d3c447f21072766cddec3522f9468a5849a76147"
+                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d3c447f21072766cddec3522f9468a5849a76147",
-                "reference": "d3c447f21072766cddec3522f9468a5849a76147",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8d1f50f1436fb4b05e7127360483dd9c6e73da16",
+                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16",
                 "shasum": ""
             },
             "require": {
@@ -2225,7 +2321,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-07T10:08:30+00:00"
+            "time": "2021-05-26T22:08:38+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6197,16 +6293,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "5d23474cd411b07f46980d05f9c38e7dc0d17460"
+                "reference": "d1f703d73f782af5427697cdc5023395cd341963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/5d23474cd411b07f46980d05f9c38e7dc0d17460",
-                "reference": "5d23474cd411b07f46980d05f9c38e7dc0d17460",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/d1f703d73f782af5427697cdc5023395cd341963",
+                "reference": "d1f703d73f782af5427697cdc5023395cd341963",
                 "shasum": ""
             },
             "require": {
@@ -6253,7 +6349,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2021-05-18T15:44:02+00:00"
+            "time": "2021-05-25T16:41:13+00:00"
         },
         {
             "name": "mockery/mockery",

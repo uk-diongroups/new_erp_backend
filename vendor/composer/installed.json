@@ -2153,17 +2153,17 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.6.0",
-            "version_normalized": "1.6.0.0",
+            "version": "v1.7.0",
+            "version_normalized": "1.7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "5d23474cd411b07f46980d05f9c38e7dc0d17460"
+                "reference": "d1f703d73f782af5427697cdc5023395cd341963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/5d23474cd411b07f46980d05f9c38e7dc0d17460",
-                "reference": "5d23474cd411b07f46980d05f9c38e7dc0d17460",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/d1f703d73f782af5427697cdc5023395cd341963",
+                "reference": "d1f703d73f782af5427697cdc5023395cd341963",
                 "shasum": ""
             },
             "require": {
@@ -2172,7 +2172,7 @@
                 "illuminate/support": "^8.0|^9.0",
                 "php": "^7.3|^8.0"
             },
-            "time": "2021-05-18T15:44:02+00:00",
+            "time": "2021-05-25T16:41:13+00:00",
             "bin": [
                 "bin/sail"
             ],
@@ -2216,17 +2216,17 @@
         },
         {
             "name": "laravel/sanctum",
-            "version": "v2.11.0",
-            "version_normalized": "2.11.0.0",
+            "version": "v2.11.1",
+            "version_normalized": "2.11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sanctum.git",
-                "reference": "3ed8f60dafef026acc21733366a08746a7bd176e"
+                "reference": "5de9d0ced8ae50dacb00c16077115f32e94d13f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sanctum/zipball/3ed8f60dafef026acc21733366a08746a7bd176e",
-                "reference": "3ed8f60dafef026acc21733366a08746a7bd176e",
+                "url": "https://api.github.com/repos/laravel/sanctum/zipball/5de9d0ced8ae50dacb00c16077115f32e94d13f2",
+                "reference": "5de9d0ced8ae50dacb00c16077115f32e94d13f2",
                 "shasum": ""
             },
             "require": {
@@ -2241,7 +2241,7 @@
                 "orchestra/testbench": "^4.0|^5.0|^6.0",
                 "phpunit/phpunit": "^8.0|^9.3"
             },
-            "time": "2021-05-11T21:03:57+00:00",
+            "time": "2021-05-25T16:43:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2689,6 +2689,76 @@
             "install-path": "../mockery/mockery"
         },
         {
+            "name": "modules/department",
+            "version": "1.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/department",
+                "reference": "69d9f5941d76581dafca8ba28794ccfca757d36e"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Department\\Providers\\DepartmentServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Department\\": "src/",
+                    "Modules\\Department\\Tests\\": "tests/",
+                    "Modules\\Department\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Department\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            },
+            "install-path": "../modules/department"
+        },
+        {
+            "name": "modules/designation",
+            "version": "1.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/designation",
+                "reference": "42671fea84184215a1fe15415658a006163274fd"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Designation\\Providers\\DesignationServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Designation\\": "src/",
+                    "Modules\\Designation\\Tests\\": "tests/",
+                    "Modules\\Designation\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Designation\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            },
+            "install-path": "../modules/designation"
+        },
+        {
             "name": "modules/employee",
             "version": "1.0",
             "version_normalized": "1.0.0.0",
@@ -2722,6 +2792,41 @@
                 "relative": true
             },
             "install-path": "../modules/employee"
+        },
+        {
+            "name": "modules/hr",
+            "version": "1.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/hr",
+                "reference": "6addb66ff3e84c33d28ec90d58a574797cd12de7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Hr\\Providers\\HrServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Hr\\": "src/",
+                    "Modules\\Hr\\Tests\\": "tests/",
+                    "Modules\\Hr\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Hr\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            },
+            "install-path": "../modules/hr"
         },
         {
             "name": "monolog/monolog",
@@ -2885,17 +2990,17 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.48.0",
-            "version_normalized": "2.48.0.0",
+            "version": "2.48.1",
+            "version_normalized": "2.48.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d3c447f21072766cddec3522f9468a5849a76147"
+                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d3c447f21072766cddec3522f9468a5849a76147",
-                "reference": "d3c447f21072766cddec3522f9468a5849a76147",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8d1f50f1436fb4b05e7127360483dd9c6e73da16",
+                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16",
                 "shasum": ""
             },
             "require": {
@@ -2914,7 +3019,7 @@
                 "phpunit/phpunit": "^7.5.20 || ^8.5.14",
                 "squizlabs/php_codesniffer": "^3.4"
             },
-            "time": "2021-05-07T10:08:30+00:00",
+            "time": "2021-05-26T22:08:38+00:00",
             "bin": [
                 "bin/carbon"
             ],

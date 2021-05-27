@@ -120,10 +120,22 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Modules\\Hr\\Tests\\' => 17,
+            'Modules\\Hr\\Database\\Seeders\\' => 28,
+            'Modules\\Hr\\Database\\Factories\\' => 30,
+            'Modules\\Hr\\' => 11,
             'Modules\\Employee\\Tests\\' => 23,
             'Modules\\Employee\\Database\\Seeders\\' => 34,
             'Modules\\Employee\\Database\\Factories\\' => 36,
             'Modules\\Employee\\' => 17,
+            'Modules\\Designation\\Tests\\' => 26,
+            'Modules\\Designation\\Database\\Seeders\\' => 37,
+            'Modules\\Designation\\Database\\Factories\\' => 39,
+            'Modules\\Designation\\' => 20,
+            'Modules\\Department\\Tests\\' => 25,
+            'Modules\\Department\\Database\\Seeders\\' => 36,
+            'Modules\\Department\\Database\\Factories\\' => 38,
+            'Modules\\Department\\' => 19,
         ),
         'L' => 
         array (
@@ -403,6 +415,22 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Modules\\Hr\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/hr/tests',
+        ),
+        'Modules\\Hr\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/hr/database/seeders',
+        ),
+        'Modules\\Hr\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/hr/database/factories',
+        ),
+        'Modules\\Hr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/hr/src',
+        ),
         'Modules\\Employee\\Tests\\' => 
         array (
             0 => __DIR__ . '/..' . '/modules/employee/tests',
@@ -418,6 +446,38 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Modules\\Employee\\' => 
         array (
             0 => __DIR__ . '/..' . '/modules/employee/src',
+        ),
+        'Modules\\Designation\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/designation/tests',
+        ),
+        'Modules\\Designation\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/designation/database/seeders',
+        ),
+        'Modules\\Designation\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/designation/database/factories',
+        ),
+        'Modules\\Designation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/designation/src',
+        ),
+        'Modules\\Department\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/department/tests',
+        ),
+        'Modules\\Department\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/department/database/seeders',
+        ),
+        'Modules\\Department\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/department/database/factories',
+        ),
+        'Modules\\Department\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/department/src',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -3375,10 +3435,16 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Mockery\\Undefined' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Undefined.php',
         'Mockery\\VerificationDirector' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationDirector.php',
         'Mockery\\VerificationExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
+        'Modules\\Department\\Providers\\DepartmentServiceProvider' => __DIR__ . '/..' . '/modules/department/src/Providers/DepartmentServiceProvider.php',
+        'Modules\\Department\\Tests\\DepartmentServiceProviderTest' => __DIR__ . '/..' . '/modules/department/tests/DepartmentServiceProviderTest.php',
+        'Modules\\Designation\\Providers\\DesignationServiceProvider' => __DIR__ . '/..' . '/modules/designation/src/Providers/DesignationServiceProvider.php',
+        'Modules\\Designation\\Tests\\DesignationServiceProviderTest' => __DIR__ . '/..' . '/modules/designation/tests/DesignationServiceProviderTest.php',
         'Modules\\Employee\\Http\\Controllers\\EmployeeController' => __DIR__ . '/..' . '/modules/employee/src/Http/Controllers/EmployeeController.php',
         'Modules\\Employee\\Models\\Employee' => __DIR__ . '/..' . '/modules/employee/src/Models/Employee.php',
         'Modules\\Employee\\Providers\\EmployeeServiceProvider' => __DIR__ . '/..' . '/modules/employee/src/Providers/EmployeeServiceProvider.php',
         'Modules\\Employee\\Tests\\EmployeeServiceProviderTest' => __DIR__ . '/..' . '/modules/employee/tests/EmployeeServiceProviderTest.php',
+        'Modules\\Hr\\Providers\\HrServiceProvider' => __DIR__ . '/..' . '/modules/hr/src/Providers/HrServiceProvider.php',
+        'Modules\\Hr\\Tests\\HrServiceProviderTest' => __DIR__ . '/..' . '/modules/hr/tests/HrServiceProviderTest.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
