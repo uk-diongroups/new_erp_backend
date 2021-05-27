@@ -30,7 +30,7 @@ class EmployeeController extends Controller
     {
         $response = Http::get('https://ukdiononline.com/api/allLMSemployees/rw');
         if($response->successful()){
-            return $res_body = $response['data'];
+            $res_body = $response['data'];
             $fn = [];
             foreach ($res_body as $key => $value) {
                Employee::create($value);
