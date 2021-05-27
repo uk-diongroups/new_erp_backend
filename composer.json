@@ -16,12 +16,11 @@
         "laravel/framework": "^8.40",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "modules/department": "*",
-        "modules/designation": "*",
         "modules/employee": "*",
         "modules/hr": "*"
     },
     "require-dev": {
+        "bennett-treptow/laravel-migration-generator": "^3.1",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

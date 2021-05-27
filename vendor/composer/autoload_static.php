@@ -128,14 +128,6 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
             'Modules\\Employee\\Database\\Seeders\\' => 34,
             'Modules\\Employee\\Database\\Factories\\' => 36,
             'Modules\\Employee\\' => 17,
-            'Modules\\Designation\\Tests\\' => 26,
-            'Modules\\Designation\\Database\\Seeders\\' => 37,
-            'Modules\\Designation\\Database\\Factories\\' => 39,
-            'Modules\\Designation\\' => 20,
-            'Modules\\Department\\Tests\\' => 25,
-            'Modules\\Department\\Database\\Seeders\\' => 36,
-            'Modules\\Department\\Database\\Factories\\' => 38,
-            'Modules\\Department\\' => 19,
         ),
         'L' => 
         array (
@@ -145,6 +137,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+            'LaravelMigrationGenerator\\' => 26,
         ),
         'J' => 
         array (
@@ -447,38 +440,6 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             0 => __DIR__ . '/..' . '/modules/employee/src',
         ),
-        'Modules\\Designation\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/tests',
-        ),
-        'Modules\\Designation\\Database\\Seeders\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/database/seeders',
-        ),
-        'Modules\\Designation\\Database\\Factories\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/database/factories',
-        ),
-        'Modules\\Designation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/src',
-        ),
-        'Modules\\Department\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/tests',
-        ),
-        'Modules\\Department\\Database\\Seeders\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/database/seeders',
-        ),
-        'Modules\\Department\\Database\\Factories\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/database/factories',
-        ),
-        'Modules\\Department\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/src',
-        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
@@ -502,6 +463,10 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'LaravelMigrationGenerator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src',
         ),
         'JsonSchema\\' => 
         array (
@@ -3063,6 +3028,36 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'JsonSchema\\Uri\\UriResolver' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Uri/UriResolver.php',
         'JsonSchema\\Uri\\UriRetriever' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Uri/UriRetriever.php',
         'JsonSchema\\Validator' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Validator.php',
+        'LaravelMigrationGenerator\\Commands\\GenerateMigrationsCommand' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Commands/GenerateMigrationsCommand.php',
+        'LaravelMigrationGenerator\\Definitions\\ColumnDefinition' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Definitions/ColumnDefinition.php',
+        'LaravelMigrationGenerator\\Definitions\\IndexDefinition' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Definitions/IndexDefinition.php',
+        'LaravelMigrationGenerator\\GeneratorManagers\\BaseGeneratorManager' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/GeneratorManagers/BaseGeneratorManager.php',
+        'LaravelMigrationGenerator\\GeneratorManagers\\Interfaces\\GeneratorManagerInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/GeneratorManagers/Interfaces/GeneratorManagerInterface.php',
+        'LaravelMigrationGenerator\\GeneratorManagers\\MySQLGeneratorManager' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/GeneratorManagers/MySQLGeneratorManager.php',
+        'LaravelMigrationGenerator\\Generators\\BaseTableGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/BaseTableGenerator.php',
+        'LaravelMigrationGenerator\\Generators\\BaseViewGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/BaseViewGenerator.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpColumnIndices' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpColumnIndices.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpForeignKeyIndices' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpForeignKeyIndices.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpMorphColumns' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpMorphColumns.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpTimestampsColumn' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpTimestampsColumn.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\WritesTablesToFile' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/WritesTablesToFile.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\WritesToFile' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/WritesToFile.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\WritesViewsToFile' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/WritesViewsToFile.php',
+        'LaravelMigrationGenerator\\Generators\\Interfaces\\TableGeneratorInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Interfaces/TableGeneratorInterface.php',
+        'LaravelMigrationGenerator\\Generators\\Interfaces\\ViewGeneratorInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Interfaces/ViewGeneratorInterface.php',
+        'LaravelMigrationGenerator\\Generators\\MySQL\\TableGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/MySQL/TableGenerator.php',
+        'LaravelMigrationGenerator\\Generators\\MySQL\\ViewGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/MySQL/ViewGenerator.php',
+        'LaravelMigrationGenerator\\Helpers\\ConfigResolver' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Helpers/ConfigResolver.php',
+        'LaravelMigrationGenerator\\Helpers\\ValueToString' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Helpers/ValueToString.php',
+        'LaravelMigrationGenerator\\Helpers\\WritableTrait' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Helpers/WritableTrait.php',
+        'LaravelMigrationGenerator\\LaravelMigrationGeneratorProvider' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/LaravelMigrationGeneratorProvider.php',
+        'LaravelMigrationGenerator\\Tokenizers\\BaseColumnTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/BaseColumnTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\BaseIndexTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/BaseIndexTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\BaseTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/BaseTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\Interfaces\\ColumnTokenizerInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/Interfaces/ColumnTokenizerInterface.php',
+        'LaravelMigrationGenerator\\Tokenizers\\Interfaces\\IndexTokenizerInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/Interfaces/IndexTokenizerInterface.php',
+        'LaravelMigrationGenerator\\Tokenizers\\MySQL\\ColumnTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/MySQL/ColumnTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\MySQL\\IndexTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/MySQL/IndexTokenizer.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
@@ -3435,14 +3430,15 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Mockery\\Undefined' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Undefined.php',
         'Mockery\\VerificationDirector' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationDirector.php',
         'Mockery\\VerificationExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
-        'Modules\\Department\\Providers\\DepartmentServiceProvider' => __DIR__ . '/..' . '/modules/department/src/Providers/DepartmentServiceProvider.php',
-        'Modules\\Department\\Tests\\DepartmentServiceProviderTest' => __DIR__ . '/..' . '/modules/department/tests/DepartmentServiceProviderTest.php',
-        'Modules\\Designation\\Providers\\DesignationServiceProvider' => __DIR__ . '/..' . '/modules/designation/src/Providers/DesignationServiceProvider.php',
-        'Modules\\Designation\\Tests\\DesignationServiceProviderTest' => __DIR__ . '/..' . '/modules/designation/tests/DesignationServiceProviderTest.php',
+        'Modules\\Employee\\Http\\Controllers\\DesignationController' => __DIR__ . '/..' . '/modules/employee/src/Http/Controllers/DesignationController.php',
         'Modules\\Employee\\Http\\Controllers\\EmployeeController' => __DIR__ . '/..' . '/modules/employee/src/Http/Controllers/EmployeeController.php',
+        'Modules\\Employee\\Models\\Department' => __DIR__ . '/..' . '/modules/employee/src/Models/Department.php',
+        'Modules\\Employee\\Models\\Designation' => __DIR__ . '/..' . '/modules/employee/src/Models/Designation.php',
         'Modules\\Employee\\Models\\Employee' => __DIR__ . '/..' . '/modules/employee/src/Models/Employee.php',
         'Modules\\Employee\\Providers\\EmployeeServiceProvider' => __DIR__ . '/..' . '/modules/employee/src/Providers/EmployeeServiceProvider.php',
         'Modules\\Employee\\Tests\\EmployeeServiceProviderTest' => __DIR__ . '/..' . '/modules/employee/tests/EmployeeServiceProviderTest.php',
+        'Modules\\Hr\\Models\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/hr/src/Models/MonthlyEvaluation.php',
+        'Modules\\Hr\\Models\\Payroll' => __DIR__ . '/..' . '/modules/hr/src/Models/Payroll.php',
         'Modules\\Hr\\Providers\\HrServiceProvider' => __DIR__ . '/..' . '/modules/hr/src/Providers/HrServiceProvider.php',
         'Modules\\Hr\\Tests\\HrServiceProviderTest' => __DIR__ . '/..' . '/modules/hr/tests/HrServiceProviderTest.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
