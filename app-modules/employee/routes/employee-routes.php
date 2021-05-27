@@ -3,8 +3,8 @@
 
  use Modules\Employee\Http\Controllers\EmployeeController;
 
- 
  Route::post('/employees/login', [EmployeeController::class, 'login'])->name('employees.login');
+ Route::get('/fetchEmployees', [EmployeeController::class, 'getEmployees'])->name('getEmployees');
  
  Route::prefix('api')->middleware(['auth:sanctum'])->group(function () {
     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');

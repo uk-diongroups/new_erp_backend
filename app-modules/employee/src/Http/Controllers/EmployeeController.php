@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Modules\Employee\Models\Employee;
+use Illuminate\Support\Facades\Http;
 
 class EmployeeController extends Controller
 {
@@ -23,6 +24,35 @@ class EmployeeController extends Controller
             'status'=> true,
             'data' => $data
         ]);
+    }
+
+    public function getEmployees()
+    {
+        $response = Http::get('https://ukdiononline.com/api/allLMSemployees/rw');
+        if($response->successful()){
+            return $res_body = $response['data'];
+            $fn = [];
+            foreach ($res_body as $key => $value) {
+               Employee::create($value);
+               //creating in a loop
+            }
+            if(count(Employee::all()) > 1 ){
+                return response()->json([
+                    'status' => true,
+                    'message'=> "Employees created"
+                ]);
+            }else{
+                return response()->json([
+                    'status' => 'failed',
+                    'message'=> "Operation failed to create"
+                ]);
+            }
+
+            //return $res_body;
+        }else{
+            return "an error occured";
+        }
+
     }
 
     public function login(Request $request)
