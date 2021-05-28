@@ -14,13 +14,12 @@ class CreateMonthlyEvaluationCategorys extends Migration
     public function up()
     {
         Schema::create('monthly_evaluation_categorys', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('monthly_evaluation_id')->nullable();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('monthly_evaluation_id')->nullable();
             $table->text('task')->nullable();
             $table->foreign('monthly_evaluation_id')
             ->references('id')
             ->on('monthly_evaluations')
-            ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();
         });

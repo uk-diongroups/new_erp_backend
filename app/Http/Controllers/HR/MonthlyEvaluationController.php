@@ -40,7 +40,18 @@ class MonthlyEvaluationController extends Controller
      */
     public function store(Request $request)
     {
-       
+        try {
+
+            $data = MonthlyEvaluation::create($request->all());
+            if ($data) {
+                return response()->json($data, 201);
+            } else {  
+                return response()->json(['error' => 'Error saving record..'], 505);
+            }
+
+        } catch (Exception $e) {
+            return response()->json(['error' => 'Internal server error'], 500);
+        }
     }
 
     /**

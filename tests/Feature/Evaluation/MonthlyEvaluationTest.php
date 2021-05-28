@@ -8,15 +8,27 @@ use Tests\TestCase;
 
 class MonthlyEvaluationTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_example()
-    {
-        $response = $this->get('/');
 
-        $response->assertStatus(200);
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->withoutExceptionHandling();
+    }
+    /**
+     * Test supervisor can store evaluation
+     *
+     * @test 
+     */
+    public function supervisor_can_store_evaluation()
+    {
+        
+        $response = $this->json('POST','/api/store/evaluation', [          
+            'user_id' => 13,
+            'employee_id' => 2,
+            'key_result_area' => "key result area test task",
+            'month_of_evaluation' => date('Y-d-m',strtotime('2021-04-12'))
+        ]);
+      
+        $response->assertStatus(201);
     }
 }
