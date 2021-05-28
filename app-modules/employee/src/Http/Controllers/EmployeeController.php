@@ -19,11 +19,9 @@ class EmployeeController extends Controller
     public function index()
     {
         $data = Employee::all();
-
-        return response()->json([
-            'status'=> true,
-            'data' => $data
-        ]);
+        if(count($data) > 1)
+            return formatAsJson(true, 'List of all employees', $data, 200);
+        return formatAsJson(false, 'No employee found', $data, 200);
     }
 
     public function getEmployees()

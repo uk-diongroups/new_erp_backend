@@ -37,6 +37,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        'b87d4c3a9f6267773d3e5ca388fed11e' => __DIR__ . '/../..' . '/app/GlobalHelpers/helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -3432,11 +3433,13 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Mockery\\VerificationExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
         'Modules\\Employee\\Http\\Controllers\\DesignationController' => __DIR__ . '/..' . '/modules/employee/src/Http/Controllers/DesignationController.php',
         'Modules\\Employee\\Http\\Controllers\\EmployeeController' => __DIR__ . '/..' . '/modules/employee/src/Http/Controllers/EmployeeController.php',
-        'Modules\\Employee\\Models\\Department' => __DIR__ . '/..' . '/modules/employee/src/Models/Department.php',
-        'Modules\\Employee\\Models\\Designation' => __DIR__ . '/..' . '/modules/employee/src/Models/Designation.php',
         'Modules\\Employee\\Models\\Employee' => __DIR__ . '/..' . '/modules/employee/src/Models/Employee.php',
         'Modules\\Employee\\Providers\\EmployeeServiceProvider' => __DIR__ . '/..' . '/modules/employee/src/Providers/EmployeeServiceProvider.php',
         'Modules\\Employee\\Tests\\EmployeeServiceProviderTest' => __DIR__ . '/..' . '/modules/employee/tests/EmployeeServiceProviderTest.php',
+        'Modules\\Hr\\Http\\Controllers\\DepartmentController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/DepartmentController.php',
+        'Modules\\Hr\\Http\\Controllers\\DesignationController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/DesignationController.php',
+        'Modules\\Hr\\Models\\Department' => __DIR__ . '/..' . '/modules/hr/src/Models/Department.php',
+        'Modules\\Hr\\Models\\Designation' => __DIR__ . '/..' . '/modules/hr/src/Models/Designation.php',
         'Modules\\Hr\\Models\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/hr/src/Models/MonthlyEvaluation.php',
         'Modules\\Hr\\Models\\Payroll' => __DIR__ . '/..' . '/modules/hr/src/Models/Payroll.php',
         'Modules\\Hr\\Providers\\HrServiceProvider' => __DIR__ . '/..' . '/modules/hr/src/Providers/HrServiceProvider.php',
