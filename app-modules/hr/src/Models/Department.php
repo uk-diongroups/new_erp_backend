@@ -2,8 +2,9 @@
 
 namespace Modules\Hr\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Modules\Employee\Models\Employee;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Department extends Model
 {
@@ -25,11 +26,8 @@ class Department extends Model
            'title',
            'status',
        ];
-   
-   
-       /**
-        * Indicates if the model should be timestamped.
-        *
-        * @var bool
-        */
+
+        public function employees(){
+          return $this->hasMany(Employee::class);
+        }
 }

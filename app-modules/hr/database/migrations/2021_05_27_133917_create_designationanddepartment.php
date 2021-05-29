@@ -19,7 +19,7 @@ class CreateDesignationanddepartment extends Migration
             $table->string('description')->nullable();
             $table->tinyInteger('status');
             $table->timestamps();
-            $table->dateTime('deleted_at')->nullable();
+            $table->softDeletes();
         });
 
         Schema::create('tbl_designations', function (Blueprint $table) {
@@ -27,6 +27,7 @@ class CreateDesignationanddepartment extends Migration
             $table->string('title', 100)->nullable();
             $table->string('description')->nullable();
             $table->tinyInteger('status');
+            $table->softDeletes();
         });
     }
 

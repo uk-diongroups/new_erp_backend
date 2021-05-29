@@ -40,8 +40,6 @@ class DepartmentController extends Controller
                     'message'=> "Operation failed to create"
                 ]);
             }
-
-            //return $res_body;
         }else{
             return "an error occured";
         }

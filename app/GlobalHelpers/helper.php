@@ -1,7 +1,7 @@
 <?php
 
 if(!function_exists('checkIfNotEmpty')){
-    function checkIfNotEmpty( $item):bool
+    function checkIfNotEmpty($item):bool
     {
         return (!empty($item) && !is_null($item));
     }
