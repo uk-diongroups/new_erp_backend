@@ -48,20 +48,14 @@ class MonthlyEvaluationTest extends TestCase
         $response->assertStatus(200);
     }
      /**
-     * Test supervisor can update evaluation
+     * Test supervisor can delete evaluation
      *
      * @test 
      */
-    public function supervisor_can_update_evaluation()
+    public function supervisor_can_delete_evaluation()
     {
-        
-        $response = $this->json('POST','/api/update/evaluation', [ 
-            'id' => 2,     
-            'key_result_area' => "update key result area test",
-            'month_of_evaluation' => date('Y-d-m',strtotime('2021-04-12'))
-        ]);
-      
-        $response->assertStatus(200);
+        $id = 12;
+        $response = $this->deleteJson("/api/delete/evaluation/{$id}");
+        $response->assertStatus(200)->assertJson(['message' => 'Record has been deleted']);
     }
-    
 }

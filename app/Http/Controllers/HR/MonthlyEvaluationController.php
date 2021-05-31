@@ -17,9 +17,20 @@ class MonthlyEvaluationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-       
+        try {
+
+            $data = MonthlyEvaluation::where('employee_id', $request->id);
+            if ($data) {
+                return response()->json(['data' => $data], 200);
+            } else {  
+                return response()->json(['error' => 'Error saving record..'], 505);
+            }
+
+        } catch (Exception $e) {
+            return response()->json(['error' => 'Internal server error'], 500);
+        }
     }
 
     /**
@@ -88,8 +99,8 @@ class MonthlyEvaluationController extends Controller
         try {
 
             $data =  MonthlyEvaluation::where('id',$request->id)
-                                      ->update(['key_result_area' => $request->key_result_area,
-                                                'month_of_evaluation' => $request->month_of_evaluation]);
+                     ->update(['key_result_area' => $request->key_result_area,
+                     'month_of_evaluation' => $request->month_of_evaluation]);
             if ($data) {
                 return response()->json($data, 200);
             } else {  
@@ -109,6 +120,16 @@ class MonthlyEvaluationController extends Controller
      */
     public function destroy(MonthlyEvaluation $data)
     {
-       
+        try {
+
+            if ($data->delete()) {
+                return response()->json(['message' => 'Record has been deleted'],200);
+            } else {  
+                return response()->json(['error' => 'Error deleting record..'], 505);
+            }
+
+        } catch (Exception $e) {
+            return response()->json(['error' => 'Internal server error.'], 500);
+        }
     }
 }

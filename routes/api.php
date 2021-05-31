@@ -18,5 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('store/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@store');
-Route::post('update/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@update');
+Route::namespace('App\Http\Controllers\HR')->group(function () {
+    Route::post('store/evaluation', 'MonthlyEvaluationController@store');
+    Route::post('update/evaluation', 'MonthlyEvaluationController@update');
+    Route::delete('delete/evaluation/{data}', 'MonthlyEvaluationController@destroy');
+});
+
+// Route::post('store/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@store');
+// Route::post('update/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@update');
+// Route::delete('delete/evaluation/{data}', 'App\Http\Controllers\HR\MonthlyEvaluationController@destroy');
