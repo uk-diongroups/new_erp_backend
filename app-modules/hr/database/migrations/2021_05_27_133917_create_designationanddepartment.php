@@ -27,6 +27,7 @@ class CreateDesignationanddepartment extends Migration
             $table->string('title', 100)->nullable();
             $table->string('description')->nullable();
             $table->tinyInteger('status');
+            $table->timestamps();
             $table->softDeletes();
         });
     }

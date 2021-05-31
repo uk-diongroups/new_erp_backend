@@ -20,28 +20,25 @@ class DesignationController extends Controller
 
     public function bulksaveDesignations()
     {
-        
         $response = Http::get('https://ukdiononline.com/api/alldesignations');
         if($response->successful()){
-           return $res_body = $response['data'];
+            $res_body = $response['data'];
             $fn = [];
             foreach ($res_body as $key => $value) {
-               Department::create($value);
+               Designation::create($value);
                //creating in a loop
             }
-            if(count(Department::all()) > 1 ){
+            if(count(Designation::all()) > 1 ){
                 return response()->json([
                     'status' => true,
                     'message'=> "Designations created"
-                ]);
+                ],200);
             }else{
                 return response()->json([
                     'status' => 'failed',
                     'message'=> "Operation failed to create"
-                ]);
+                ],400);
             }
-
-            //return $res_body;
         }else{
             return "an error occured";
         }

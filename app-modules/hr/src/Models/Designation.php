@@ -2,15 +2,16 @@
 
 namespace Modules\Hr\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Designation extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
   
 
-   	public $table = 'tbl_designations';
+   	protected $table = 'tbl_designations';
 
 
    	/**
@@ -21,8 +22,11 @@ class Designation extends Model
 
    	protected $fillable = [
     	'title',
+      'description',
     	'status',
     ];
+
+    public $timestamps = ['created_at','updated_at','deleted_at'];
 
 
     /**
@@ -30,5 +34,5 @@ class Designation extends Model
      *
      * @var bool
      */
-    public $timestamps = false;
+    //public $timestamps = false;
 }

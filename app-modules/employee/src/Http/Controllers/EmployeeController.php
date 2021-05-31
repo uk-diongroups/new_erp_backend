@@ -14,7 +14,8 @@ class EmployeeController extends Controller
     public function login(Request $request)
     {
          $LI = $request->login_info;
-         $employee = Employee::where('email', $LI)->first();
+         $employee = Employee::where('email', $LI)
+                                ->where('status',1)->first();
         if ($employee) {
             if ($this->attemptLogin($employee, $request)) {   //Attempt to log in user/employee
                 $accessToken = $employee->createToken('authToken',['server:update'])->plainTextToken;
@@ -92,7 +93,7 @@ class EmployeeController extends Controller
         return formatAsJson(false, 'No employee found', $emps, 200);
     }
 
-    public function getEmployees()
+    public function getEmployees() : Response
     {
         $response = Http::get('https://ukdiononline.com/api/allLMSemployees/rw');
         if($response->successful()){
@@ -158,7 +159,12 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->json()->all();
+        $created = Employee::create($data);
+        if($created)
+            return formatAsJson(true, 'employee created', $data,200);
+        return formatAsJson(false, 'Failed to create','',400);
+        
     }
 
     /**

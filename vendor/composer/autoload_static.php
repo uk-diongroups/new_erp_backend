@@ -21,9 +21,9 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
@@ -148,6 +148,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             'InterNACHI\\Modular\\' => 19,
             'Illuminate\\Support\\' => 19,
+            'Illuminate\\Notifications\\' => 25,
             'Illuminate\\' => 11,
         ),
         'G' => 
@@ -482,6 +483,10 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
             1 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections',
         ),
+        'Illuminate\\Notifications\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/slack-notification-channel/src',
+        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -615,6 +620,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
     );
 
     public static $classMap = array (
+        'App\\Console\\Commands\\SendErrorToSlack' => __DIR__ . '/../..' . '/app/Console/Commands/SendErrorToSlack.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -628,6 +634,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Notifications\\SlackNotifier' => __DIR__ . '/../..' . '/app/Notifications/SlackNotifier.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -2595,6 +2602,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Illuminate\\Notifications\\Channels\\BroadcastChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Channels/BroadcastChannel.php',
         'Illuminate\\Notifications\\Channels\\DatabaseChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Channels/DatabaseChannel.php',
         'Illuminate\\Notifications\\Channels\\MailChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Channels/MailChannel.php',
+        'Illuminate\\Notifications\\Channels\\SlackWebhookChannel' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Channels/SlackWebhookChannel.php',
         'Illuminate\\Notifications\\Console\\NotificationTableCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Console/NotificationTableCommand.php',
         'Illuminate\\Notifications\\DatabaseNotification' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/DatabaseNotification.php',
         'Illuminate\\Notifications\\DatabaseNotificationCollection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/DatabaseNotificationCollection.php',
@@ -2607,12 +2615,16 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Illuminate\\Notifications\\Messages\\DatabaseMessage' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Messages/DatabaseMessage.php',
         'Illuminate\\Notifications\\Messages\\MailMessage' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Messages/MailMessage.php',
         'Illuminate\\Notifications\\Messages\\SimpleMessage' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Messages/SimpleMessage.php',
+        'Illuminate\\Notifications\\Messages\\SlackAttachment' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Messages/SlackAttachment.php',
+        'Illuminate\\Notifications\\Messages\\SlackAttachmentField' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Messages/SlackAttachmentField.php',
+        'Illuminate\\Notifications\\Messages\\SlackMessage' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Messages/SlackMessage.php',
         'Illuminate\\Notifications\\Notifiable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Notifiable.php',
         'Illuminate\\Notifications\\Notification' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Notification.php',
         'Illuminate\\Notifications\\NotificationSender' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/NotificationSender.php',
         'Illuminate\\Notifications\\NotificationServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/NotificationServiceProvider.php',
         'Illuminate\\Notifications\\RoutesNotifications' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/RoutesNotifications.php',
         'Illuminate\\Notifications\\SendQueuedNotifications' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/SendQueuedNotifications.php',
+        'Illuminate\\Notifications\\SlackChannelServiceProvider' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/SlackChannelServiceProvider.php',
         'Illuminate\\Pagination\\AbstractCursorPaginator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Pagination/AbstractCursorPaginator.php',
         'Illuminate\\Pagination\\AbstractPaginator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Pagination/AbstractPaginator.php',
         'Illuminate\\Pagination\\Cursor' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Pagination/Cursor.php',
@@ -2974,6 +2986,8 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'InterNACHI\\Modular\\Console\\Commands\\ModulesClear' => __DIR__ . '/..' . '/internachi/modular/src/Console/Commands/ModulesClear.php',
         'InterNACHI\\Modular\\Console\\Commands\\ModulesList' => __DIR__ . '/..' . '/internachi/modular/src/Console/Commands/ModulesList.php',
         'InterNACHI\\Modular\\Console\\Commands\\ModulesSync' => __DIR__ . '/..' . '/internachi/modular/src/Console/Commands/ModulesSync.php',
+        'InterNACHI\\Modular\\Exceptions\\CannotFindModuleForPathException' => __DIR__ . '/..' . '/internachi/modular/src/Exceptions/CannotFindModuleForPathException.php',
+        'InterNACHI\\Modular\\Exceptions\\Exception' => __DIR__ . '/..' . '/internachi/modular/src/Exceptions/Exception.php',
         'InterNACHI\\Modular\\Support\\AutoDiscoveryHelper' => __DIR__ . '/..' . '/internachi/modular/src/Support/AutoDiscoveryHelper.php',
         'InterNACHI\\Modular\\Support\\Facades\\Modules' => __DIR__ . '/..' . '/internachi/modular/src/Support/Facades/Modules.php',
         'InterNACHI\\Modular\\Support\\FinderCollection' => __DIR__ . '/..' . '/internachi/modular/src/Support/FinderCollection.php',
