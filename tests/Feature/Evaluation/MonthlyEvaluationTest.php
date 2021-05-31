@@ -29,6 +29,39 @@ class MonthlyEvaluationTest extends TestCase
             'month_of_evaluation' => date('Y-d-m',strtotime('2021-04-12'))
         ]);
       
-        $response->assertStatus(201);
+        $response->assertStatus(200);
     }
+     /**
+     * Test supervisor can update evaluation
+     *
+     * @test 
+     */
+    public function supervisor_can_update_evaluation()
+    {
+        
+        $response = $this->json('POST','/api/update/evaluation', [ 
+            'id' => 2,     
+            'key_result_area' => "update key result area test",
+            'month_of_evaluation' => date('Y-d-m',strtotime('2021-04-12'))
+        ]);
+      
+        $response->assertStatus(200);
+    }
+     /**
+     * Test supervisor can update evaluation
+     *
+     * @test 
+     */
+    public function supervisor_can_update_evaluation()
+    {
+        
+        $response = $this->json('POST','/api/update/evaluation', [ 
+            'id' => 2,     
+            'key_result_area' => "update key result area test",
+            'month_of_evaluation' => date('Y-d-m',strtotime('2021-04-12'))
+        ]);
+      
+        $response->assertStatus(200);
+    }
+    
 }

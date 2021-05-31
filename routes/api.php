@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('store/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@store');
+Route::post('update/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@update');

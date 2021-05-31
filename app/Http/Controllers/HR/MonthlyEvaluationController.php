@@ -44,7 +44,7 @@ class MonthlyEvaluationController extends Controller
 
             $data = MonthlyEvaluation::create($request->all());
             if ($data) {
-                return response()->json($data, 201);
+                return response()->json($data, 200);
             } else {  
                 return response()->json(['error' => 'Error saving record..'], 505);
             }
@@ -83,9 +83,22 @@ class MonthlyEvaluationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, MonthlyEvaluation $data)
+    public function update(Request $request)
     {
-       
+        try {
+
+            $data =  MonthlyEvaluation::where('id',$request->id)
+                                      ->update(['key_result_area' => $request->key_result_area,
+                                                'month_of_evaluation' => $request->month_of_evaluation]);
+            if ($data) {
+                return response()->json($data, 200);
+            } else {  
+                return response()->json(['error' => 'Update Error '], 401);
+            }
+
+        } catch (Exception $e) {
+            return response()->json(['error' => 'Internal server error'], 500);
+        }
     }
 
     /**
