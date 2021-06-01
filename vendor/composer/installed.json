@@ -2891,6 +2891,41 @@
             "install-path": "../modules/hr"
         },
         {
+            "name": "modules/monthlyevaluation",
+            "version": "1.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/monthlyevaluation",
+                "reference": "7092f6c7c2e3baef61646137bf917c8a18e602c7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Monthlyevaluation\\Providers\\MonthlyevaluationServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Monthlyevaluation\\": "src/",
+                    "Modules\\Monthlyevaluation\\Tests\\": "tests/",
+                    "Modules\\Monthlyevaluation\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Monthlyevaluation\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            },
+            "install-path": "../modules/monthlyevaluation"
+        },
+        {
             "name": "monolog/monolog",
             "version": "2.2.0",
             "version_normalized": "2.2.0.0",

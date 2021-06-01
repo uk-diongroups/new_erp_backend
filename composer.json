@@ -18,7 +18,8 @@
         "laravel/slack-notification-channel": "^2.3",
         "laravel/tinker": "^2.5",
         "modules/employee": "*",
-        "modules/hr": "*"
+        "modules/hr": "*",
+        "modules/monthlyevaluation": "*"
     },
     "require-dev": {
         "bennett-treptow/laravel-migration-generator": "^3.1",
@@ -35,7 +36,7 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         },
-        "files":[
+        "files": [
             "app/GlobalHelpers/helper.php"
         ]
     },

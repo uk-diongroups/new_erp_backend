@@ -8,7 +8,7 @@
     Route::get('fetchEmployees', [EmployeeController::class, 'getEmployees'])->name('getEmployees');
  });
 
- Route::prefix('api')->group(function () {
+ Route::middleware('auth:sanctum')->prefix('api')->group(function () {
     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
     Route::get('/employee/logout', [EmployeeController::class, 'logout'])->name('employee.logout');
     Route::get('/employees/create', [EmployeeController::class, 'create'])->name('employees.create');

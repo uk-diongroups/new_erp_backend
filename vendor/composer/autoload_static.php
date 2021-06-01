@@ -121,6 +121,10 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Modules\\Monthlyevaluation\\Tests\\' => 32,
+            'Modules\\Monthlyevaluation\\Database\\Seeders\\' => 43,
+            'Modules\\Monthlyevaluation\\Database\\Factories\\' => 45,
+            'Modules\\Monthlyevaluation\\' => 26,
             'Modules\\Hr\\Tests\\' => 17,
             'Modules\\Hr\\Database\\Seeders\\' => 28,
             'Modules\\Hr\\Database\\Factories\\' => 30,
@@ -409,6 +413,22 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Modules\\Monthlyevaluation\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/tests',
+        ),
+        'Modules\\Monthlyevaluation\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/database/seeders',
+        ),
+        'Modules\\Monthlyevaluation\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/database/factories',
+        ),
+        'Modules\\Monthlyevaluation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/src',
         ),
         'Modules\\Hr\\Tests\\' => 
         array (
@@ -3454,10 +3474,13 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Modules\\Hr\\Http\\Controllers\\DesignationController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/DesignationController.php',
         'Modules\\Hr\\Models\\Department' => __DIR__ . '/..' . '/modules/hr/src/Models/Department.php',
         'Modules\\Hr\\Models\\Designation' => __DIR__ . '/..' . '/modules/hr/src/Models/Designation.php',
-        'Modules\\Hr\\Models\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/hr/src/Models/MonthlyEvaluation.php',
         'Modules\\Hr\\Models\\Payroll' => __DIR__ . '/..' . '/modules/hr/src/Models/Payroll.php',
         'Modules\\Hr\\Providers\\HrServiceProvider' => __DIR__ . '/..' . '/modules/hr/src/Providers/HrServiceProvider.php',
         'Modules\\Hr\\Tests\\HrServiceProviderTest' => __DIR__ . '/..' . '/modules/hr/tests/HrServiceProviderTest.php',
+        'Modules\\Monthlyevaluation\\Http\\Controllers\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Http/Controllers/MonthlyEvaluation.php',
+        'Modules\\Monthlyevaluation\\Models\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Models/MonthlyEvaluation.php',
+        'Modules\\Monthlyevaluation\\Providers\\MonthlyevaluationServiceProvider' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Providers/MonthlyevaluationServiceProvider.php',
+        'Modules\\Monthlyevaluation\\Tests\\MonthlyevaluationServiceProviderTest' => __DIR__ . '/..' . '/modules/monthlyevaluation/tests/MonthlyevaluationServiceProviderTest.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',

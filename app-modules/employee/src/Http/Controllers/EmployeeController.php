@@ -14,8 +14,7 @@ class EmployeeController extends Controller
     public function login(Request $request)
     {
          $LI = $request->login_info;
-         $employee = Employee::where('email', $LI)
-                                ->where('status',1)->first();
+         $employee = Employee::where('email', $LI)->where('status',1)->first();
         if ($employee) {
             if ($this->attemptLogin($employee, $request)) {   //Attempt to log in user/employee
                 $accessToken = $employee->createToken('authToken',['server:update'])->plainTextToken;

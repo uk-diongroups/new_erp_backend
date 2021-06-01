@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e3412a90469a07a67a42cf5eb87c9ed",
+    "content-hash": "fe13e09318fe044795aeafebe7e3a5ce",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2121,6 +2121,38 @@
                     "Modules\\Hr\\Tests\\": "tests/",
                     "Modules\\Hr\\Database\\Factories\\": "database/factories/",
                     "Modules\\Hr\\Database\\Seeders\\": "database/seeders/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "modules/monthlyevaluation",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/monthlyevaluation",
+                "reference": "7092f6c7c2e3baef61646137bf917c8a18e602c7"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Modules\\Monthlyevaluation\\Providers\\MonthlyevaluationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Modules\\Monthlyevaluation\\": "src/",
+                    "Modules\\Monthlyevaluation\\Tests\\": "tests/",
+                    "Modules\\Monthlyevaluation\\Database\\Factories\\": "database/factories/",
+                    "Modules\\Monthlyevaluation\\Database\\Seeders\\": "database/seeders/"
                 }
             },
             "license": [
