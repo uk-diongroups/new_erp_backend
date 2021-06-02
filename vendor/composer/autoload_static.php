@@ -21,9 +21,9 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
@@ -37,6 +37,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
+        'b87d4c3a9f6267773d3e5ca388fed11e' => __DIR__ . '/../..' . '/app/GlobalHelpers/helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -120,6 +121,10 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Modules\\Monthlyevaluation\\Tests\\' => 32,
+            'Modules\\Monthlyevaluation\\Database\\Seeders\\' => 43,
+            'Modules\\Monthlyevaluation\\Database\\Factories\\' => 45,
+            'Modules\\Monthlyevaluation\\' => 26,
             'Modules\\Hr\\Tests\\' => 17,
             'Modules\\Hr\\Database\\Seeders\\' => 28,
             'Modules\\Hr\\Database\\Factories\\' => 30,
@@ -128,14 +133,6 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
             'Modules\\Employee\\Database\\Seeders\\' => 34,
             'Modules\\Employee\\Database\\Factories\\' => 36,
             'Modules\\Employee\\' => 17,
-            'Modules\\Designation\\Tests\\' => 26,
-            'Modules\\Designation\\Database\\Seeders\\' => 37,
-            'Modules\\Designation\\Database\\Factories\\' => 39,
-            'Modules\\Designation\\' => 20,
-            'Modules\\Department\\Tests\\' => 25,
-            'Modules\\Department\\Database\\Seeders\\' => 36,
-            'Modules\\Department\\Database\\Factories\\' => 38,
-            'Modules\\Department\\' => 19,
         ),
         'L' => 
         array (
@@ -145,6 +142,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+            'LaravelMigrationGenerator\\' => 26,
         ),
         'J' => 
         array (
@@ -154,6 +152,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             'InterNACHI\\Modular\\' => 19,
             'Illuminate\\Support\\' => 19,
+            'Illuminate\\Notifications\\' => 25,
             'Illuminate\\' => 11,
         ),
         'G' => 
@@ -415,6 +414,22 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Modules\\Monthlyevaluation\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/tests',
+        ),
+        'Modules\\Monthlyevaluation\\Database\\Seeders\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/database/seeders',
+        ),
+        'Modules\\Monthlyevaluation\\Database\\Factories\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/database/factories',
+        ),
+        'Modules\\Monthlyevaluation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/modules/monthlyevaluation/src',
+        ),
         'Modules\\Hr\\Tests\\' => 
         array (
             0 => __DIR__ . '/..' . '/modules/hr/tests',
@@ -447,38 +462,6 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             0 => __DIR__ . '/..' . '/modules/employee/src',
         ),
-        'Modules\\Designation\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/tests',
-        ),
-        'Modules\\Designation\\Database\\Seeders\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/database/seeders',
-        ),
-        'Modules\\Designation\\Database\\Factories\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/database/factories',
-        ),
-        'Modules\\Designation\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/designation/src',
-        ),
-        'Modules\\Department\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/tests',
-        ),
-        'Modules\\Department\\Database\\Seeders\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/database/seeders',
-        ),
-        'Modules\\Department\\Database\\Factories\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/database/factories',
-        ),
-        'Modules\\Department\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/modules/department/src',
-        ),
         'League\\MimeTypeDetection\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
@@ -503,6 +486,10 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
         ),
+        'LaravelMigrationGenerator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src',
+        ),
         'JsonSchema\\' => 
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
@@ -515,6 +502,10 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
             1 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections',
+        ),
+        'Illuminate\\Notifications\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/slack-notification-channel/src',
         ),
         'Illuminate\\' => 
         array (
@@ -649,6 +640,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
     );
 
     public static $classMap = array (
+        'App\\Console\\Commands\\SendErrorToSlack' => __DIR__ . '/../..' . '/app/Console/Commands/SendErrorToSlack.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -666,6 +658,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'App\\Models\\Model\\HR\\MonthlyEvaluationCatogory' => __DIR__ . '/../..' . '/app/Models/Model/HR/MonthlyEvaluationCatogory.php',
         'App\\Models\\Model\\HR\\MonthlyEvaluationMark' => __DIR__ . '/../..' . '/app/Models/Model/HR/MonthlyEvaluationMark.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Notifications\\SlackNotifier' => __DIR__ . '/../..' . '/app/Notifications/SlackNotifier.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -2626,6 +2619,7 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Illuminate\\Notifications\\Channels\\BroadcastChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Channels/BroadcastChannel.php',
         'Illuminate\\Notifications\\Channels\\DatabaseChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Channels/DatabaseChannel.php',
         'Illuminate\\Notifications\\Channels\\MailChannel' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Channels/MailChannel.php',
+        'Illuminate\\Notifications\\Channels\\SlackWebhookChannel' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Channels/SlackWebhookChannel.php',
         'Illuminate\\Notifications\\Console\\NotificationTableCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Console/NotificationTableCommand.php',
         'Illuminate\\Notifications\\DatabaseNotification' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/DatabaseNotification.php',
         'Illuminate\\Notifications\\DatabaseNotificationCollection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/DatabaseNotificationCollection.php',
@@ -2638,12 +2632,16 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Illuminate\\Notifications\\Messages\\DatabaseMessage' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Messages/DatabaseMessage.php',
         'Illuminate\\Notifications\\Messages\\MailMessage' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Messages/MailMessage.php',
         'Illuminate\\Notifications\\Messages\\SimpleMessage' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Messages/SimpleMessage.php',
+        'Illuminate\\Notifications\\Messages\\SlackAttachment' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Messages/SlackAttachment.php',
+        'Illuminate\\Notifications\\Messages\\SlackAttachmentField' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Messages/SlackAttachmentField.php',
+        'Illuminate\\Notifications\\Messages\\SlackMessage' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/Messages/SlackMessage.php',
         'Illuminate\\Notifications\\Notifiable' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Notifiable.php',
         'Illuminate\\Notifications\\Notification' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/Notification.php',
         'Illuminate\\Notifications\\NotificationSender' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/NotificationSender.php',
         'Illuminate\\Notifications\\NotificationServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/NotificationServiceProvider.php',
         'Illuminate\\Notifications\\RoutesNotifications' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/RoutesNotifications.php',
         'Illuminate\\Notifications\\SendQueuedNotifications' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Notifications/SendQueuedNotifications.php',
+        'Illuminate\\Notifications\\SlackChannelServiceProvider' => __DIR__ . '/..' . '/laravel/slack-notification-channel/src/SlackChannelServiceProvider.php',
         'Illuminate\\Pagination\\AbstractCursorPaginator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Pagination/AbstractCursorPaginator.php',
         'Illuminate\\Pagination\\AbstractPaginator' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Pagination/AbstractPaginator.php',
         'Illuminate\\Pagination\\Cursor' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Pagination/Cursor.php',
@@ -3005,6 +3003,8 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'InterNACHI\\Modular\\Console\\Commands\\ModulesClear' => __DIR__ . '/..' . '/internachi/modular/src/Console/Commands/ModulesClear.php',
         'InterNACHI\\Modular\\Console\\Commands\\ModulesList' => __DIR__ . '/..' . '/internachi/modular/src/Console/Commands/ModulesList.php',
         'InterNACHI\\Modular\\Console\\Commands\\ModulesSync' => __DIR__ . '/..' . '/internachi/modular/src/Console/Commands/ModulesSync.php',
+        'InterNACHI\\Modular\\Exceptions\\CannotFindModuleForPathException' => __DIR__ . '/..' . '/internachi/modular/src/Exceptions/CannotFindModuleForPathException.php',
+        'InterNACHI\\Modular\\Exceptions\\Exception' => __DIR__ . '/..' . '/internachi/modular/src/Exceptions/Exception.php',
         'InterNACHI\\Modular\\Support\\AutoDiscoveryHelper' => __DIR__ . '/..' . '/internachi/modular/src/Support/AutoDiscoveryHelper.php',
         'InterNACHI\\Modular\\Support\\Facades\\Modules' => __DIR__ . '/..' . '/internachi/modular/src/Support/Facades/Modules.php',
         'InterNACHI\\Modular\\Support\\FinderCollection' => __DIR__ . '/..' . '/internachi/modular/src/Support/FinderCollection.php',
@@ -3060,6 +3060,36 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'JsonSchema\\Uri\\UriResolver' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Uri/UriResolver.php',
         'JsonSchema\\Uri\\UriRetriever' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Uri/UriRetriever.php',
         'JsonSchema\\Validator' => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema/Validator.php',
+        'LaravelMigrationGenerator\\Commands\\GenerateMigrationsCommand' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Commands/GenerateMigrationsCommand.php',
+        'LaravelMigrationGenerator\\Definitions\\ColumnDefinition' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Definitions/ColumnDefinition.php',
+        'LaravelMigrationGenerator\\Definitions\\IndexDefinition' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Definitions/IndexDefinition.php',
+        'LaravelMigrationGenerator\\GeneratorManagers\\BaseGeneratorManager' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/GeneratorManagers/BaseGeneratorManager.php',
+        'LaravelMigrationGenerator\\GeneratorManagers\\Interfaces\\GeneratorManagerInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/GeneratorManagers/Interfaces/GeneratorManagerInterface.php',
+        'LaravelMigrationGenerator\\GeneratorManagers\\MySQLGeneratorManager' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/GeneratorManagers/MySQLGeneratorManager.php',
+        'LaravelMigrationGenerator\\Generators\\BaseTableGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/BaseTableGenerator.php',
+        'LaravelMigrationGenerator\\Generators\\BaseViewGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/BaseViewGenerator.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpColumnIndices' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpColumnIndices.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpForeignKeyIndices' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpForeignKeyIndices.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpMorphColumns' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpMorphColumns.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\CleansUpTimestampsColumn' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/CleansUpTimestampsColumn.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\WritesTablesToFile' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/WritesTablesToFile.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\WritesToFile' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/WritesToFile.php',
+        'LaravelMigrationGenerator\\Generators\\Concerns\\WritesViewsToFile' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Concerns/WritesViewsToFile.php',
+        'LaravelMigrationGenerator\\Generators\\Interfaces\\TableGeneratorInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Interfaces/TableGeneratorInterface.php',
+        'LaravelMigrationGenerator\\Generators\\Interfaces\\ViewGeneratorInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/Interfaces/ViewGeneratorInterface.php',
+        'LaravelMigrationGenerator\\Generators\\MySQL\\TableGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/MySQL/TableGenerator.php',
+        'LaravelMigrationGenerator\\Generators\\MySQL\\ViewGenerator' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Generators/MySQL/ViewGenerator.php',
+        'LaravelMigrationGenerator\\Helpers\\ConfigResolver' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Helpers/ConfigResolver.php',
+        'LaravelMigrationGenerator\\Helpers\\ValueToString' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Helpers/ValueToString.php',
+        'LaravelMigrationGenerator\\Helpers\\WritableTrait' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Helpers/WritableTrait.php',
+        'LaravelMigrationGenerator\\LaravelMigrationGeneratorProvider' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/LaravelMigrationGeneratorProvider.php',
+        'LaravelMigrationGenerator\\Tokenizers\\BaseColumnTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/BaseColumnTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\BaseIndexTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/BaseIndexTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\BaseTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/BaseTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\Interfaces\\ColumnTokenizerInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/Interfaces/ColumnTokenizerInterface.php',
+        'LaravelMigrationGenerator\\Tokenizers\\Interfaces\\IndexTokenizerInterface' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/Interfaces/IndexTokenizerInterface.php',
+        'LaravelMigrationGenerator\\Tokenizers\\MySQL\\ColumnTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/MySQL/ColumnTokenizer.php',
+        'LaravelMigrationGenerator\\Tokenizers\\MySQL\\IndexTokenizer' => __DIR__ . '/..' . '/bennett-treptow/laravel-migration-generator/src/Tokenizers/MySQL/IndexTokenizer.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
@@ -3432,16 +3462,22 @@ class ComposerStaticInit5a20333693e55080d3f6872f19eef1b2
         'Mockery\\Undefined' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Undefined.php',
         'Mockery\\VerificationDirector' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationDirector.php',
         'Mockery\\VerificationExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
-        'Modules\\Department\\Providers\\DepartmentServiceProvider' => __DIR__ . '/..' . '/modules/department/src/Providers/DepartmentServiceProvider.php',
-        'Modules\\Department\\Tests\\DepartmentServiceProviderTest' => __DIR__ . '/..' . '/modules/department/tests/DepartmentServiceProviderTest.php',
-        'Modules\\Designation\\Providers\\DesignationServiceProvider' => __DIR__ . '/..' . '/modules/designation/src/Providers/DesignationServiceProvider.php',
-        'Modules\\Designation\\Tests\\DesignationServiceProviderTest' => __DIR__ . '/..' . '/modules/designation/tests/DesignationServiceProviderTest.php',
+        'Modules\\Employee\\Http\\Controllers\\DesignationController' => __DIR__ . '/..' . '/modules/employee/src/Http/Controllers/DesignationController.php',
         'Modules\\Employee\\Http\\Controllers\\EmployeeController' => __DIR__ . '/..' . '/modules/employee/src/Http/Controllers/EmployeeController.php',
         'Modules\\Employee\\Models\\Employee' => __DIR__ . '/..' . '/modules/employee/src/Models/Employee.php',
         'Modules\\Employee\\Providers\\EmployeeServiceProvider' => __DIR__ . '/..' . '/modules/employee/src/Providers/EmployeeServiceProvider.php',
         'Modules\\Employee\\Tests\\EmployeeServiceProviderTest' => __DIR__ . '/..' . '/modules/employee/tests/EmployeeServiceProviderTest.php',
+        'Modules\\Hr\\Http\\Controllers\\DepartmentController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/DepartmentController.php',
+        'Modules\\Hr\\Http\\Controllers\\DesignationController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/DesignationController.php',
+        'Modules\\Hr\\Models\\Department' => __DIR__ . '/..' . '/modules/hr/src/Models/Department.php',
+        'Modules\\Hr\\Models\\Designation' => __DIR__ . '/..' . '/modules/hr/src/Models/Designation.php',
+        'Modules\\Hr\\Models\\Payroll' => __DIR__ . '/..' . '/modules/hr/src/Models/Payroll.php',
         'Modules\\Hr\\Providers\\HrServiceProvider' => __DIR__ . '/..' . '/modules/hr/src/Providers/HrServiceProvider.php',
         'Modules\\Hr\\Tests\\HrServiceProviderTest' => __DIR__ . '/..' . '/modules/hr/tests/HrServiceProviderTest.php',
+        'Modules\\Monthlyevaluation\\Http\\Controllers\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Http/Controllers/MonthlyEvaluation.php',
+        'Modules\\Monthlyevaluation\\Models\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Models/MonthlyEvaluation.php',
+        'Modules\\Monthlyevaluation\\Providers\\MonthlyevaluationServiceProvider' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Providers/MonthlyevaluationServiceProvider.php',
+        'Modules\\Monthlyevaluation\\Tests\\MonthlyevaluationServiceProviderTest' => __DIR__ . '/..' . '/modules/monthlyevaluation/tests/MonthlyevaluationServiceProviderTest.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',
         'Monolog\\Formatter\\ChromePHPFormatter' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Formatter/ChromePHPFormatter.php',
