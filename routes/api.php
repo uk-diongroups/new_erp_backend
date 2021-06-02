@@ -19,11 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::namespace('App\Http\Controllers\HR')->group(function () {
-    Route::post('store/evaluation', 'MonthlyEvaluationController@store');
-    Route::post('update/evaluation', 'MonthlyEvaluationController@update');
-    Route::delete('delete/evaluation/{data}', 'MonthlyEvaluationController@destroy');
+    Route::post('store/evaluation', 'MonthlyEvaluationController@store')->name('store');
+    Route::post('update/evaluation', 'MonthlyEvaluationController@update')->name('update');
+    Route::delete('delete/evaluation/{data}', 'MonthlyEvaluationController@destroy')->name('destroy');
+    Route::get('evaluation', 'MonthlyEvaluationController@index')->name('index');
+    Route::get('evaluation/{id}', 'MonthlyEvaluationController@show')->name('show');
+
+    Route::post('store/evaluation/category', 'MonthlyEvaluationController@storeCategory');
+    Route::post('update/evaluation/category', 'MonthlyEvaluationController@updateCatgory');
+    Route::delete('delete/evaluation/category/{data}', 'MonthlyEvaluationController@destroyCategory');
 });
 
-// Route::post('store/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@store');
-// Route::post('update/evaluation', 'App\Http\Controllers\HR\MonthlyEvaluationController@update');
-// Route::delete('delete/evaluation/{data}', 'App\Http\Controllers\HR\MonthlyEvaluationController@destroy');

@@ -21,7 +21,7 @@ class MonthlyEvaluationController extends Controller
     {
         try {
 
-            $data = MonthlyEvaluation::where('employee_id', $request->id);
+            $data = MonthlyEvaluation::where('employee_id', $request->id)->get();
             if ($data) {
                 return response()->json(['data' => $data], 200);
             } else {  
@@ -73,7 +73,20 @@ class MonthlyEvaluationController extends Controller
      */
     public function show($id)
     {
-        
+
+        try {
+
+            $data = MonthlyEvaluation::findOrFail($id);
+            if ($data) {
+                return response()->json($data, 200);
+            } else {  
+                return response()->json(['error' => 'Data not found..'], 505);
+            }
+
+        } catch (Exception $e) {
+            return response()->json(['error' => 'Internal server error'], 500);
+        }
+       
     }
 
     /**
@@ -132,4 +145,51 @@ class MonthlyEvaluationController extends Controller
             return response()->json(['error' => 'Internal server error.'], 500);
         }
     }
+
+     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeCategory(Request $request)
+    {
+        try {
+
+            $data = MonthlyEvaluationCatogory::create($request->all());
+            if ($data) {
+                return response()->json($data, 200);
+            } else {  
+                return response()->json(['error' => 'Error saving record..'], 505);
+            }
+
+        } catch (Exception $e) {
+            return response()->json(['error' => 'Internal server error'], 500);
+        }
+    }
+
+     /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function updateCatgory(Request $request)
+    {
+        try {
+
+            $data =  MonthlyEvaluationCatogory::where('id',$request->id)
+                     ->update(['task' => $request->task]);
+            if ($data) {
+                return response()->json($data, 200);
+            } else {  
+                return response()->json(['error' => 'Update Error '], 401);
+            }
+
+        } catch (Exception $e) {
+            return response()->json(['error' => 'Internal server error'], 500);
+        }
+    }
+
 }
