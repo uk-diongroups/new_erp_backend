@@ -10,11 +10,11 @@ Route::middleware('auth:sanctum')->prefix('api')->group(function () {
     Route::post('/monthlyevaluations/sub-kpi', [MonthlyEvaluationController::class, 'createSubCategory'])->name('monthlyevaluations.subcategory');
     // Route::get('/monthlyevaluations/{monthlyevaluation}', [MonthlyEvaluationController::class, 'show'])->name('monthlyevaluations.show');
     // Route::get('/monthlyevaluations/{monthlyevaluation}/edit', [MonthlyEvaluationController::class, 'edit'])->name('monthlyevaluations.edit');
-    // Route::put('/monthlyevaluations/{monthlyevaluation}', [MonthlyEvaluationController::class, 'update'])->name('monthlyevaluations.update');
-    // Route::delete('/monthlyevaluations/{monthlyevaluation}', [MonthlyEvaluationController::class, 'destroy'])->name('monthlyevaluations.destroy');
+    Route::put('/monthlyevaluations/{monthlyevaluation}', [MonthlyEvaluationController::class, 'update'])->name('monthlyevaluations.update');
+    Route::delete('/monthlyevaluations/{monthlyevaluation}', [MonthlyEvaluationController::class, 'destroy'])->name('monthlyevaluations.destroy');
 
     Route::get('/monthlyevaluations/kpi/{employee_id}', [MonthlyEvaluationController::class, 'getEmployeeKPI'])->name('monthlyevaluations.get_kpi');
-    Route::get('/monthlyevaluations/sub-kpi/{employee_id}', [MonthlyEvaluationController::class, 'getEmployeeKPI'])->name('monthlyevaluations.get_kpi');
+    Route::get('/monthlyevaluations/eval/{employee_id}', [MonthlyEvaluationController::class, 'getFullEval'])->name('monthlyevaluations.get_eval');
     
 });
 

@@ -3,10 +3,13 @@
 namespace Modules\Monthlyevaluation\Http\Controllers;
 
 use Throwable;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Http\Controllers\Controller;
+use Illuminate\Validation\Validator;
 use Modules\Employee\Models\Employee;
+use Modules\Monthlyevaluation\Models\Sub_Categories;
 use Modules\Monthlyevaluation\Models\MonthlyEvaluation;
 
 class MonthlyEvaluationController extends Controller
@@ -57,21 +60,44 @@ class MonthlyEvaluationController extends Controller
         //check employee is active and exists
         $emp_details = Employee::where('id', (int) $request->employee_id)->where('status',1)->first();
         if(checkNotEmpty($emp_details)){
-            $eval = MonthlyEvaluation::where('employee_id',(int)$request->employee_id)->get();
+            $eval = MonthlyEvaluation::where('employee_id',(int)$request->employee_id)
+                                        ->whereMonth('created_at', Carbon::now()->month)->get();
             return formatAsJson(true,"KPIs for this employee this month", $eval, 200);
         }
         return formatAsJson(false,'KPIs not set yet for this month', $eval, 200);
 
     }
 
+    public function getFullEval(Request $request) :JsonResponse
+    {
+        $emp_details = Employee::where('id', (int) $request->employee_id)->where('status',1)->first();
+        if(checkNotEmpty($emp_details)){
+            $eval = MonthlyEvaluation::with('subkpi')->where('employee_id',(int)$request->employee_id)
+                                        ->whereMonth('created_at', Carbon::now()->month)->get();
+            return formatAsJson(true,"KPIs for this employee this month", $eval, 200);
+        }
+        return formatAsJson(false,'KPIs not set yet for this month', $eval, 200);
+    }
+
     
 
-    public function createSubCategory(Request $request):JsonResponse  
+    public function createSubCategory(Request $request)   //by employee
     {
-        $data = $request->all();
-
-
-
+        $validator = \Validator::make($request->all(), [
+            'monthly_evaluation_id' => 'required',
+            'task' => 'required'
+        ]);
+        if($validator->fails())
+            return formatAsJson(false,'Some data not filled',[],400);
+        
+        try {
+            if(Sub_Categories::create($request->all())){
+                return formatAsJson(true,'Success',[],200);
+            }
+        } catch (\Exception $e) {
+            return formatAsJson(false,$e->getMessage(),[],400);
+            
+        }
         
     }
 
@@ -104,11 +130,20 @@ class MonthlyEvaluationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) //Update KPI/KRA by supervisor
     {
-        //
+        $evalUpdate = MonthlyEvaluation::where('id', $request->appraisal_id)
+                                 ->whereMonth('created_at', Carbon::now()->month)
+                                 ->update(['key_result_area'=> $request->key_result_area]);
+
+        //if($evalUpdate)
+     //return $this->checkModelData(MonthlyEvaluation,'id',2);
     }
 
+        // public function checkModelData($model, $key, $value_to_find)
+        // {
+        //     return \str_replace("''","",$model)->where($key,$value_to_find)->first();
+        // }
     /**
      * Remove the specified resource from storage.
      *
@@ -117,6 +152,15 @@ class MonthlyEvaluationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $eval= MonthlyEvaluation::where('id', $id)->first();
+        if(checkNotEmpty($eval)){
+            try {
+                $eval->delete();
+                return formatAsJson(true,'Appraisal deleted', $eval, 200);
+            } catch (\Throwable $th) {
+                return formatAsJson(false,'An error occured', $data, 200);
+            }
+        }
+        return formatAsJson(false,'Appraisal not found', [], 404);
     }
 }

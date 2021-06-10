@@ -35,3 +35,20 @@ if(!function_exists('checkNotEmpty')){
         return (empty($data) && is_null($data)) ? false : true;
     }
 }
+
+if(!function_exists('getLoggedInEmployee')){
+    function getLoggedInEmployee(){
+        $data = getFullName();
+        return $data;
+    }
+}
+
+if(!function_exists('getFullName')){
+    function getFullName(){
+        $user = Auth::guard('sanctum')->user();
+        return $user->first_name.' '.$user->last_name; 
+    }
+}
+
+
+

@@ -178,9 +178,8 @@ class MonthlyEvaluationController extends Controller
     public function updateCatgory(Request $request)
     {
         try {
-
             $data =  MonthlyEvaluationCatogory::where('id',$request->id)
-                     ->update(['task' => $request->task]);
+                    ->update(['task' => $request->task]);
             if ($data) {
                 return response()->json($data, 200);
             } else {  

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Modules\Hr\Models\Designation;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class DesignationController extends Controller
 {
