@@ -19,7 +19,8 @@
         "laravel/tinker": "^2.5",
         "modules/employee": "*",
         "modules/hr": "*",
-        "modules/monthlyevaluation": "*"
+        "modules/monthlyevaluation": "*",
+        "spatie/laravel-permission": "^4.2"
     },
     "require-dev": {
         "bennett-treptow/laravel-migration-generator": "^3.1",

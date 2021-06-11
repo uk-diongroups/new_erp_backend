@@ -92,15 +92,15 @@ class EmployeeController extends Controller
         return formatAsJson(false, 'No employee found', $emps, 200);
     }
 
-    public function getEmployees() : Response
+    public function bulkSaveEmployees() : Response
     {
         $response = Http::get('https://ukdiononline.com/api/allLMSemployees/rw');
         if($response->successful()){
             $res_body = $response['data'];
             $fn = [];
             foreach ($res_body as $key => $value) {
-               Employee::create($value);
-               //creating in a loop
+               //Employee::create();
+               DB::table('tbl_employees')->insert([$value]);
             }
             if(count(Employee::all()) > 1 ){
                 return response()->json([

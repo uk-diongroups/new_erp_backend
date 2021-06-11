@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'fc1751757d25f808ffb5504863da82803394d6fe',
+        'reference' => '9f262dd28e7e42aedbc11a8ccf61a67b293bd93d',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -481,7 +481,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'fc1751757d25f808ffb5504863da82803394d6fe',
+            'reference' => '9f262dd28e7e42aedbc11a8ccf61a67b293bd93d',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -1059,6 +1059,15 @@
             'install_path' => __DIR__ . '/../seld/phar-utils',
             'aliases' => array(),
             'reference' => '8674b1d84ffb47cc59a101f5d5a3b61e87d23796',
+            'dev_requirement' => false,
+        ),
+        'spatie/laravel-permission' => array(
+            'pretty_version' => '4.2.0',
+            'version' => '4.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../spatie/laravel-permission',
+            'aliases' => array(),
+            'reference' => 'a6e4122b65094baba7f98df153af0768ef910c85',
             'dev_requirement' => false,
         ),
         'swiftmailer/swiftmailer' => array(

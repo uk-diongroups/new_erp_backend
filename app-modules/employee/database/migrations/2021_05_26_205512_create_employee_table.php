@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
+use Modules\Employee\Models\Employee;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateEmployeeTable extends Migration
 {
@@ -13,7 +14,7 @@ class CreateEmployeeTable extends Migration
      */
     public function up()
     {
-        if(!count(Department::all()) > 1 && !count(Designation::get()>1) ){
+        if(!Schema::hasTable('tbl_employees')){
             Schema::create('tbl_employees', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('employee_code', 20)->nullable();
