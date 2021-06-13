@@ -38,7 +38,8 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "app/GlobalHelpers/helper.php"
+            "app/GlobalHelpers/helper.php",
+            "app/GlobalHelpers/auth-helper.php"
         ]
     },
     "autoload-dev": {

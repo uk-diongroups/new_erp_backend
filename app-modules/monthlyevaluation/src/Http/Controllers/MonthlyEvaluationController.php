@@ -42,7 +42,6 @@ class MonthlyEvaluationController extends Controller
      */
     public function store(Request $request) :JsonResponse//create KRA/KPI
     {
-        
         $data = $request->all();
         try {
             $created = MonthlyEvaluation::create($data);
@@ -89,14 +88,12 @@ class MonthlyEvaluationController extends Controller
         ]);
         if($validator->fails())
             return formatAsJson(false,'Some data not filled',[],400);
-        
         try {
             if(Sub_Categories::create($request->all())){
-                return formatAsJson(true,'Success',[],200);
+                return successExecution();
             }
         } catch (\Exception $e) {
             return formatAsJson(false,$e->getMessage(),[],400);
-            
         }
         
     }
@@ -132,18 +129,12 @@ class MonthlyEvaluationController extends Controller
      */
     public function update(Request $request, $id) //Update KPI/KRA by supervisor
     {
-        $evalUpdate = MonthlyEvaluation::where('id', $request->appraisal_id)
+       return ( MonthlyEvaluation::where('id', $request->appraisal_id)
                                  ->whereMonth('created_at', Carbon::now()->month)
-                                 ->update(['key_result_area'=> $request->key_result_area]);
-
-        //if($evalUpdate)
-     //return $this->checkModelData(MonthlyEvaluation,'id',2);
+                                 ->update(['key_result_area'=> $request->key_result_area]) ) 
+                                 ? successExecution(): failedExecution($request);
     }
 
-        // public function checkModelData($model, $key, $value_to_find)
-        // {
-        //     return \str_replace("''","",$model)->where($key,$value_to_find)->first();
-        // }
     /**
      * Remove the specified resource from storage.
      *

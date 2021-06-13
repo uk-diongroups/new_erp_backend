@@ -39,6 +39,7 @@ class ComposerStaticInita0108dcb358dc73f62a079d34f6174d5
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
         'b87d4c3a9f6267773d3e5ca388fed11e' => __DIR__ . '/../..' . '/app/GlobalHelpers/helper.php',
+        'd96ce342e024bbb05326146ddb40fa01' => __DIR__ . '/../..' . '/app/GlobalHelpers/auth-helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -3490,14 +3491,17 @@ class ComposerStaticInita0108dcb358dc73f62a079d34f6174d5
         'Modules\\Employee\\Models\\Employee' => __DIR__ . '/..' . '/modules/employee/src/Models/Employee.php',
         'Modules\\Employee\\Providers\\EmployeeServiceProvider' => __DIR__ . '/..' . '/modules/employee/src/Providers/EmployeeServiceProvider.php',
         'Modules\\Employee\\Tests\\EmployeeServiceProviderTest' => __DIR__ . '/..' . '/modules/employee/tests/EmployeeServiceProviderTest.php',
+        'Modules\\Hr\\Http\\Controllers\\AccessGateController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/AccessGateController.php',
         'Modules\\Hr\\Http\\Controllers\\DepartmentController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/DepartmentController.php',
         'Modules\\Hr\\Http\\Controllers\\DesignationController' => __DIR__ . '/..' . '/modules/hr/src/Http/Controllers/DesignationController.php',
+        'Modules\\Hr\\Http\\Middleware\\AccessAssigner' => __DIR__ . '/..' . '/modules/hr/src/Http/Middleware/AccessAssigner.php',
         'Modules\\Hr\\Models\\Department' => __DIR__ . '/..' . '/modules/hr/src/Models/Department.php',
         'Modules\\Hr\\Models\\Designation' => __DIR__ . '/..' . '/modules/hr/src/Models/Designation.php',
         'Modules\\Hr\\Models\\Payroll' => __DIR__ . '/..' . '/modules/hr/src/Models/Payroll.php',
         'Modules\\Hr\\Providers\\HrServiceProvider' => __DIR__ . '/..' . '/modules/hr/src/Providers/HrServiceProvider.php',
         'Modules\\Hr\\Tests\\HrServiceProviderTest' => __DIR__ . '/..' . '/modules/hr/tests/HrServiceProviderTest.php',
         'Modules\\Monthlyevaluation\\Http\\Controllers\\MonthlyEvaluationController' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Http/Controllers/MonthlyEvaluationController.php',
+        'Modules\\Monthlyevaluation\\Http\\Middleware\\CreateMpe' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Http/Middleware/CreateMpe.php',
         'Modules\\Monthlyevaluation\\Models\\ME_Marks' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Models/ME_Marks.php',
         'Modules\\Monthlyevaluation\\Models\\MonthlyEvaluation' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Models/MonthlyEvaluation.php',
         'Modules\\Monthlyevaluation\\Models\\Sub_Categories' => __DIR__ . '/..' . '/modules/monthlyevaluation/src/Models/Sub_Categories.php',

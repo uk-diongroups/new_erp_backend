@@ -2,11 +2,11 @@
 
 use Modules\Monthlyevaluation\Http\Controllers\MonthlyEvaluationController;
 
-Route::middleware('auth:sanctum')->prefix('api')->group(function () {
+Route::middleware(['auth:sanctum'])->prefix('api')->group(function () {
 
     Route::get('/monthlyevaluations', [MonthlyEvaluationController::class, 'index'])->name('monthlyevaluations.index');
     // Route::get('/monthlyevaluations/create', [MonthlyEvaluationController::class, 'create'])->name('monthlyevaluations.create');
-    Route::post('/monthlyevaluations', [MonthlyEvaluationController::class, 'store'])->name('monthlyevaluations.store');//create KPI
+    Route::post('/monthlyevaluations', [MonthlyEvaluationController::class, 'store'])->middleware('CanCreateMpe')->name('monthlyevaluations.store');//create KPI
     Route::post('/monthlyevaluations/sub-kpi', [MonthlyEvaluationController::class, 'createSubCategory'])->name('monthlyevaluations.subcategory');
     // Route::get('/monthlyevaluations/{monthlyevaluation}', [MonthlyEvaluationController::class, 'show'])->name('monthlyevaluations.show');
     // Route::get('/monthlyevaluations/{monthlyevaluation}/edit', [MonthlyEvaluationController::class, 'edit'])->name('monthlyevaluations.edit');

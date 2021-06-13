@@ -3,34 +3,29 @@
 namespace Modules\Employee\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Modules\Employee\Models\Employee;
 use Illuminate\Support\Facades\Http;
+use Modules\Employee\Models\Employee;
 
 class EmployeeController extends Controller
 {
     public function login(Request $request)
     {
-         $LI = $request->login_info;
-         $employee = Employee::where('email', $LI)->where('status',1)->first();
-        if ($employee) {
-            if ($this->attemptLogin($employee, $request)) {   //Attempt to log in user/employee
-                $accessToken = $employee->createToken('authToken',['server:update'])->plainTextToken;
+        $employee = Employee::where('email', $request->login_info)->where('status',1)->first();
+        if(checkIfNotEmpty($employee))
+            if($this->attemptLogin($employee, $request))
                 return response()->json([
                     "status" => true,
                     "messge"=> "log in successful",
                     "data" => $employee,
-                    "access_token" => $accessToken,
+                    "access_token" => $employee->createToken('authToken',['fetch:users'])->plainTextToken,
                     "token_type" => "Bearer"
-                ]);
-            }
-            //return $this->sendFailedLoginResponse($request);
-            return "Access denied";
-        }
-            //return $this->UserNotFoundResponse($request);
-            return "User not found";
+                ],200);
+            return FailedLoginResponse();
+        return UserNotFoundResponse($request->login_info);
     }
 
     /**
@@ -38,7 +33,8 @@ class EmployeeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    
+    public function index() : Object
     {
         $emps = Employee::get()->load(['departments','designation']);
         if(count($emps) > 1){
@@ -92,7 +88,7 @@ class EmployeeController extends Controller
         return formatAsJson(false, 'No employee found', $emps, 200);
     }
 
-    public function bulkSaveEmployees() : Response
+    public function bulkSaveEmployees()
     {
         $response = Http::get('https://ukdiononline.com/api/allLMSemployees/rw');
         if($response->successful()){
@@ -113,8 +109,6 @@ class EmployeeController extends Controller
                     'message'=> "Operation failed to create"
                 ]);
             }
-
-            //return $res_body;
         }else{
             return "an error occured";
         }
@@ -123,7 +117,7 @@ class EmployeeController extends Controller
 
    
     
-    public function attemptLogin(Object $employee, Object  $request)
+    public function attemptLogin(Object $employee, Object  $request) : bool
     {
         return (Hash::check($request->password, $employee->password)) ? true : false;
     }

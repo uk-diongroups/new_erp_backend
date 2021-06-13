@@ -38,4 +38,5 @@ return array(
     'ed962a97bd972bc82007176b647d4e36' => $vendorDir . '/facade/ignition/src/helpers.php',
     '377b22b161c09ed6e5152de788ca020a' => $vendorDir . '/spatie/laravel-permission/src/helpers.php',
     'b87d4c3a9f6267773d3e5ca388fed11e' => $baseDir . '/app/GlobalHelpers/helper.php',
+    'd96ce342e024bbb05326146ddb40fa01' => $baseDir . '/app/GlobalHelpers/auth-helper.php',
 );
