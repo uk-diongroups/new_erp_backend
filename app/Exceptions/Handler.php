@@ -2,8 +2,11 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use App\Notifications\SlackNotifier;
+use Modules\Employee\Models\Employee;
+use Illuminate\Notifications\Messages\SlackMessage;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -35,15 +38,7 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->reportable(function (Throwable $e) {
-            //
+            Employee::where('email', 'francisigbokwe@ukdioninvestment.com')->first()->notify(new SlackNotifier($e->getMessage()));
         });
     }
-
-    // public function render($request, Exception $exception)
-    // {
-    //     if ($exception instanceof \Illuminate\Auth\AuthenticationException) {
-    //         return response('Not Authorised', 401);
-    //     }
-    //     return parent::render($request, $exception);
-    // }
 }

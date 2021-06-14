@@ -8,6 +8,12 @@
     Route::get('fetchEmployees', [EmployeeController::class, 'getEmployees'])->name('getEmployees');
  });
  
+ Route::get('/test-slack', function () {
+    //throw new Exception('Exception is thrown');
+    \Log::critical('This is a critical message Sent from Laravel App');
+      throw new Exception("I threw a custom error");
+      
+  });
 
  Route::middleware('auth:sanctum')->prefix('api')->group(function () {
     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');

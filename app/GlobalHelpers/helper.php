@@ -25,16 +25,6 @@ if(!function_exists('formatAsJson')){
     }
 }
 
-if(!function_exists('checkValidEmployee')){
-    function checkValidEmployee($emp_id){
-        return $data = Employee::where('id', (int) $emp_id)->where('status',1)->first();
-        if(empty($data)){
-            return false;
-        }
-        return true;
-    }
-}
-
 if(!function_exists('getLoggedInEmployee')){
     function getLoggedInEmployee($info=null){
         switch ($info) {

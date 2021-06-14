@@ -12,14 +12,15 @@ class SlackNotifier extends Notification
 {
     use Queueable;
 
+    public $myerrorbag;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($e = "Some message")
     {
-        //
+        $this->myerrorbag = $e;
     }
 
     /**
@@ -36,7 +37,9 @@ class SlackNotifier extends Notification
     public function toSlack($notifiable)
     {
         return (new SlackMessage)
-                    ->content('Testing Slack notifier again');
+                ->from('NEW ERP', ':ghost:')
+                ->to('#app-error-logs')
+                ->content($this->myerrorbag);
     }
 
 }
