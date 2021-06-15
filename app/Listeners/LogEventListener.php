@@ -25,9 +25,9 @@ class LogEventListener
      */
     public function handle($event)
     {
-        if ($event->type == 'error') {
-            $this->notifyViaSlack($event->message, $event->context);
-        }
+        // if ($event->type == 'error') {
+        //     $this->notifyViaSlack($event->message, $event->context);
+        // }
     }
 
     /**
@@ -37,14 +37,14 @@ class LogEventListener
      * @param  string  $context
      * @return void
      */
-    protected function notifyViaSlack($message, $context)
-    {
-        /*
-         * Slack notification logic
-         */
-        return (new SlackMessage)
-        ->from('NEW ERP', ':ghost:')
-        ->to('#app-error-logs')
-        ->content('Testing new ERP slack error notifier');
-    }  
+    // protected function notifyViaSlack($message, $context)
+    // {
+    //     /*
+    //      * Slack notification logic
+    //      */
+    //     return (new SlackMessage)
+    //     ->from('NEW ERP', ':ghost:')
+    //     ->to('#app-error-logs')
+    //     ->content('Testing new ERP slack error notifier');
+    // }  
 }
