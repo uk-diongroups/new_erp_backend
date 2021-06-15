@@ -14,8 +14,16 @@ class EmployeeController extends Controller
 {
     public function login(Request $request)
     {
+        $validator= \Validator::make($request->all(),[
+            'login_info' => 'required',
+            'password' => 'required'
+        ]);
+        if($validator->fails()){
+            return array("status" => 400, "message" => $validator->errors()->first(), "data" => array());
+        }
+
         $employee = Employee::where('email', $request->login_info)->where('status',1)->first();
-        if(checkIfNotEmpty($employee))
+        if(checkNotEmpty($employee))
             if($this->attemptLogin($employee, $request))
                 return response()->json([
                     "status" => true,
