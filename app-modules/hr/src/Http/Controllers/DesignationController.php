@@ -41,7 +41,7 @@ class DesignationController extends Controller
                 ],400);
             }
         }else{
-            return "an error occured";
+            throw new Exception("Cant find designations from external service");
         }
     }
     /**

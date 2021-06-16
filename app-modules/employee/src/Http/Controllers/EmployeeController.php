@@ -2,6 +2,7 @@
 
 namespace Modules\Employee\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -118,7 +119,7 @@ class EmployeeController extends Controller
                 ]);
             }
         }else{
-            return "an error occured";
+            throw new Exception("Failed to fetch from ERP service");
         }
 
     }

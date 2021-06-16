@@ -18,6 +18,8 @@ class CreateTblDesignationsTable extends Migration
             $table->string('title', 100)->nullable();
             $table->string('description')->nullable();
             $table->tinyInteger('status');
+            $table->timestamps();
+            $table->dateTime('deleted_at')->nullable();
         });
     }
 
