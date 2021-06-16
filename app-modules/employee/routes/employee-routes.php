@@ -24,5 +24,5 @@
     Route::delete('/employees/{employee}', [EmployeeController::class, 'destroy'])->name('employees.destroy');
     //Route::get('/employees/create', [EmployeeController::class, 'create'])->name('employees.create');
     // Route::get('/employees/{employee}', [EmployeeController::class, 'show'])->name('employees.show');
-   Route::get('/gofetchfromerp', [EmployeeController::class, 'bulkSaveEmployees'])->name('employees.bulksave');
- });
+   });
+   Route::get('/employees/gofetchfromerp', [EmployeeController::class, 'bulkSaveEmployees'])->name('employees.bulksave');
