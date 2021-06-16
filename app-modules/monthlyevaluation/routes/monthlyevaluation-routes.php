@@ -15,6 +15,10 @@ Route::middleware(['auth:sanctum'])->prefix('api')->group(function () {
 
     Route::get('/monthlyevaluations/kpi/{employee_id}', [MonthlyEvaluationController::class, 'getEmployeeKPI'])->name('monthlyevaluations.get_kpi');
     Route::get('/monthlyevaluations/eval/{employee_id}', [MonthlyEvaluationController::class, 'getFullEval'])->name('monthlyevaluations.get_eval');
-    
+});
+Route::fallback(function(){
+    return response()->json([
+        'status' => false,
+        'message' => 'Page Not Found. If error persists, contact it@ukdion.com'], 404);
 });
 

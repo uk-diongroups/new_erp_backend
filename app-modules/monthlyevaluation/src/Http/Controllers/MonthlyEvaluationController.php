@@ -11,7 +11,7 @@ use Illuminate\Validation\Validator;
 use Modules\Employee\Models\Employee;
 use Modules\Monthlyevaluation\Models\Sub_Categories;
 use Modules\Monthlyevaluation\Models\MonthlyEvaluation;
-
+use Exception;
 class MonthlyEvaluationController extends Controller
 {
     /**
@@ -45,13 +45,17 @@ class MonthlyEvaluationController extends Controller
         $data = $request->all();
         try {
             $created = MonthlyEvaluation::create($data);
-            if($created)
-                return formatAsJson(true,'Appraisal created', $data, 200);
-        } catch (\Throwable $th) {
-            return $th;
-            return formatAsJson(false,'Failed to create', "", 400);
+            return formatAsJson(true,'Appraisal created', $data, 200);
+        } catch (\Exception $e) {
+           throw new Exception($e->getMessage());  
+            return formatAsJson(false, $e->getMessage(), "Error Occured", 400);
         }
 
+    }
+
+    public function throwMe($e)
+    {
+        throw new Exception($e->getMessage());  
     }
 
     public function getEmployeeKPI(Request $request) :JsonResponse

@@ -7,6 +7,7 @@ use App\Notifications\SlackNotifier;
 use Modules\Employee\Models\Employee;
 use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class Handler extends ExceptionHandler
 {
