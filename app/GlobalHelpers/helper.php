@@ -57,7 +57,6 @@ if(!function_exists('getUserById')){
     }
 }
 
-
 if(!function_exists('failedExecution')){
     function failedExecution($request){
         \Log::info("An Error occured, causer => $request");

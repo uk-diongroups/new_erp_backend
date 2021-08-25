@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "265ccc81cdd6a860fb4becfa02d12726",
+    "content-hash": "fb31822f9abb4c40f3273dcbd9edb1c8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1325,16 +1325,16 @@
         },
         {
             "name": "internachi/modular",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InterNACHI/modular.git",
-                "reference": "20d8229740a27b89a0bf17aec8da7b56bf10d4b2"
+                "reference": "7c995aa78c1f82a0de62233d60498239ec817bdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InterNACHI/modular/zipball/20d8229740a27b89a0bf17aec8da7b56bf10d4b2",
-                "reference": "20d8229740a27b89a0bf17aec8da7b56bf10d4b2",
+                "url": "https://api.github.com/repos/InterNACHI/modular/zipball/7c995aa78c1f82a0de62233d60498239ec817bdd",
+                "reference": "7c995aa78c1f82a0de62233d60498239ec817bdd",
                 "shasum": ""
             },
             "require": {
@@ -1346,6 +1346,7 @@
             },
             "require-dev": {
                 "ext-json": "*",
+                "friendsofphp/php-cs-fixer": "^2.19",
                 "mockery/mockery": "^1.3",
                 "orchestra/testbench": "^5.0|^6.0",
                 "phpunit/phpunit": "^8.0"
@@ -1380,9 +1381,9 @@
             ],
             "support": {
                 "issues": "https://github.com/InterNACHI/modular/issues",
-                "source": "https://github.com/InterNACHI/modular/tree/1.3.1"
+                "source": "https://github.com/InterNACHI/modular/tree/1.4.0"
             },
-            "time": "2021-05-28T20:05:39+00:00"
+            "time": "2021-07-07T16:53:00+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -2068,6 +2069,67 @@
             "time": "2021-01-18T20:58:21+00:00"
         },
         {
+            "name": "logio-dev/laravel-driver",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/logio-dev/laravel-driver.git",
+                "reference": "7e7c3f26553de73e7b216c51486c0447e20ebfbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/logio-dev/laravel-driver/zipball/7e7c3f26553de73e7b216c51486c0447e20ebfbe",
+                "reference": "7e7c3f26553de73e7b216c51486c0447e20ebfbe",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.3",
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "laravel/framework": "8.x",
+                "orchestra/testbench": "^6.19",
+                "pestphp/pest": "^1.11",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Logio\\LogioServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Logio\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben",
+                    "email": "hello@logio.dev"
+                }
+            ],
+            "description": "The official driver for Laravel, send your application logs to Logio.dev.",
+            "keywords": [
+                "driver",
+                "laravel",
+                "log",
+                "logio"
+            ],
+            "support": {
+                "issues": "https://github.com/logio-dev/laravel-driver/issues",
+                "source": "https://github.com/logio-dev/laravel-driver/tree/1.1.0"
+            },
+            "time": "2021-07-24T10:09:33+00:00"
+        },
+        {
             "name": "modules/employee",
             "version": "1.0",
             "dist": {
@@ -2351,6 +2413,52 @@
                 }
             ],
             "time": "2021-06-02T07:31:40+00:00"
+        },
+        {
+            "name": "nickdnk/zerobounce-php",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nickdnk/zerobounce-php.git",
+                "reference": "c7757d19fcc06b0976fdaf76d3f0aca3028403d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nickdnk/zerobounce-php/zipball/c7757d19fcc06b0976fdaf76d3f0aca3028403d6",
+                "reference": "c7757d19fcc06b0976fdaf76d3f0aca3028403d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "nickdnk\\ZeroBounce\\": "src/",
+                    "nickdnk\\ZeroBounce\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolai Cornelis",
+                    "email": "nickdnk@hotmail.com"
+                }
+            ],
+            "description": "OOP integration with the ZeroBounce API.",
+            "support": {
+                "issues": "https://github.com/nickdnk/zerobounce-php/issues",
+                "source": "https://github.com/nickdnk/zerobounce-php/tree/1.1.1"
+            },
+            "time": "2021-05-09T12:03:48+00:00"
         },
         {
             "name": "nikic/php-parser",

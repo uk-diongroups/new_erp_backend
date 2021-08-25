@@ -2,16 +2,18 @@
 
 namespace Modules\Monthlyevaluation\Http\Controllers;
 
+use Exception;
 use Throwable;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Validation\Validator;
 use Modules\Employee\Models\Employee;
 use Modules\Monthlyevaluation\Models\Sub_Categories;
 use Modules\Monthlyevaluation\Models\MonthlyEvaluation;
-use Exception;
+
 class MonthlyEvaluationController extends Controller
 {
     /**
@@ -42,9 +44,11 @@ class MonthlyEvaluationController extends Controller
      */
     public function store(Request $request) :JsonResponse//create KRA/KPI
     {
-        $data = $request->all();
+        return $data = $request->all();
         try {
             $created = MonthlyEvaluation::create($data);
+
+            Log::info("New monthly evaluation category created,Testing Log.io:  "+ $data);
             return formatAsJson(true,'Appraisal created', $data, 200);
         } catch (\Exception $e) {
            throw new Exception($e->getMessage());  

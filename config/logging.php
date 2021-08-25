@@ -1,5 +1,6 @@
 <?php
 
+use Logio\LogioHandler;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -17,7 +18,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'stack'),
+    'default' => env('LOG_CHANNEL', 'single'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,7 +38,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily','slack'],
+            'channels' => ['daily'],
             'ignore_exceptions' => false,
         ],
 
@@ -71,6 +72,16 @@ return [
                 'port' => env('PAPERTRAIL_PORT'),
             ],
         ],
+        // 'logio' => [
+        //         'driver' => 'monolog',
+        //         'level' => env('LOG_LEVEL', 'debug'),
+        //         'handler' => Logio\LogioHandler::class,
+        //         'handler_with' => [
+        //             'key' => env('LOGIO_API_KEY'),
+        //             'maxBuffer' => env('LOGIO_MAX_BUFFER', 0),
+        //             'endpoint' => env('LOGIO_API_ENDPOINT', 'https://api.logio.dev'),
+        //         ],
+        //     ],  
 
         'stderr' => [
             'driver' => 'monolog',

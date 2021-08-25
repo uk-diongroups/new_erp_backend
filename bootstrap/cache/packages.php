@@ -71,6 +71,13 @@
       0 => 'Laravel\\Tinker\\TinkerServiceProvider',
     ),
   ),
+  'logio-dev/laravel-driver' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Logio\\LogioServiceProvider',
+    ),
+  ),
   'modules/employee' => 
   array (
     'providers' => 

@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Employee\Tests;
+// namespace Modules\Employee\Tests;
 
-class EmployeeServiceProviderTest extends TestCase
-{
-	// TODO
-}
+// class EmployeeServiceProviderTest extends TestCase
+// {
+// 	// TODO
+// }

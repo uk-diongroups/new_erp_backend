@@ -4,7 +4,12 @@ namespace Modules\Employee\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use nickdnk\ZeroBounce\Email;
+use nickdnk\ZeroBounce\Result;
 use Illuminate\Support\Facades\DB;
+use nickdnk\ZeroBounce\ZeroBounce;
+use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -13,28 +18,33 @@ use Modules\Employee\Models\Employee;
 
 class EmployeeController extends Controller
 {
-    public function login(Request $request)
-    {
-        $validator= \Validator::make($request->all(),[
-            'login_info' => 'required',
-            'password' => 'required'
+    public function login (Request $request) {
+        $validator = \Validator::make($request->all(), [
+            'email' => 'required|string|email|max:255',
+            'password' => 'required|string|min:4',
         ]);
-        if($validator->fails()){
-            return array("status" => 400, "message" => $validator->errors()->first(), "data" => array());
+        if ($validator->fails())
+        {
+            return response(['errors'=>$validator->errors()->all()], 422);
         }
-
-        $employee = Employee::where('email', $request->login_info)->where('status',1)->first();
-        if(checkNotEmpty($employee))
-            if($this->attemptLogin($employee, $request))
-                return response()->json([
+        $user = Employee::where('email', $request->email)->where('status', '1')->first();
+        if ($user) {;
+            if (Hash::check($request->password, $user->password)) {
+               return response()->json([
                     "status" => true,
-                    "messge"=> "log in successful",
-                    "data" => $employee,
-                    "access_token" => $employee->createToken('authToken',['fetch:users'])->plainTextToken,
+                    "messge"=> "login successful",
+                    "data" => $user,
+                    "access_token" => $user->createToken('authToken',['users:getall'])->plainTextToken,
                     "token_type" => "Bearer"
-                ],200);
-            return FailedLoginResponse();
-        return UserNotFoundResponse($request->login_info);
+                ],Response::HTTP_OK);
+            } else {
+                $response = ["message" => "Password mismatch"];
+                return response($response, 422);
+            }
+        } else {
+            $response = ["message" =>'User does not exist'];
+            return response($response, 422);
+        }
     }
 
     /**
@@ -131,10 +141,9 @@ class EmployeeController extends Controller
         return (Hash::check($request->password, $employee->password)) ? true : false;
     }
 
-    public function logout(){
-        $user= Auth::guard('sanctum')->user();
+    public function logout(Request $request){
         try {
-            $killedToken=$user->tokens()->delete();
+            $killedToken=$request->user()->tokens()->delete();
             if($killedToken){
                 return response()->json(['status'=> true,'message'=> 'Logout successful'],200);
             }
@@ -166,7 +175,6 @@ class EmployeeController extends Controller
         if($created)
             return formatAsJson(true, 'employee created', $data,200);
         return formatAsJson(false, 'Failed to create','',400);
-        
     }
 
     /**
@@ -242,5 +250,134 @@ class EmployeeController extends Controller
             }
         }
         return \Response::json($arr);
+    }
+
+    public function testmail()
+    {
+        // You can modify the timeout using the second parameter. Default is 15.
+        $handler = new ZeroBounce('162eec4d19724118afcd92844c77e005', 30);
+
+        $email = new Email(
+            // The email address you want to check
+            'akaigbokwelaurence@gmail.com', //'123.123.123.123'
+        );
+
+        try {
+
+            // Validate the email
+            $result = $handler->validateEmail($email);
+            
+            if ($result->getStatus() === Result::STATUS_VALID) {
+                
+                // All good
+                echo "email is good";
+                
+                if ($result->isFreeEmail()) {
+                    
+                    echo "<br/>";
+                    echo "Email is free";
+                    // Email address is free, such as @gmail.com, @hotmail.com.
+                    
+                }else{
+                    return "email is invalid";
+                }
+                
+                /**
+                * The user object contains metadata about the email address
+                * supplied by ZeroBounce. All of these may be null or empty
+                * strings, so remember to check for that. 
+                */
+                $user = $result->getUser();
+                
+                $user->getCountry();
+                $user->getRegion();
+                $user->getZipCode();
+                $user->getCity();
+                $user->getGender();
+                $user->getFirstName();
+                $user->getLastName();
+                
+            } else if ($result->getStatus() === Result::STATUS_DO_NOT_MAIL) {
+                
+                // The substatus code will help you determine the exact issue:
+                
+                switch ($result->getSubStatus()) {
+                    
+                    case Result::SUBSTATUS_DISPOSABLE:
+                    case Result::SUBSTATUS_TOXIC:
+                        // Toxic or disposable.
+                        break;
+                        
+                        
+                    case Result::SUBSTATUS_ROLE_BASED:
+                        // admin@, helpdesk@, info@ etc; not a personal email
+                        break;
+                    
+                    // ... and so on.
+                        
+                }
+                
+            } else if ($result->getStatus() === Result::STATUS_INVALID) {
+                
+                // Invalid email.
+                echo "invalid email";
+                
+            } else if ($result->getStatus() === Result::STATUS_SPAMTRAP) {
+                
+                // Spam-trap.
+
+                echo "email is spam trapped";
+                
+            } else if ($result->getStatus() === Result::STATUS_ABUSE) {
+                
+                // Abuse.
+                echo "Abuse";
+                
+            } else if ($result->getStatus() === Result::STATUS_CATCH_ALL) {
+                
+                // Address is catch-all; not necessarily a private email.
+                echo "address is catch all";
+                
+            } else if ($result->getStatus() === Result::STATUS_UNKNOWN) {
+                
+                // Unknown email status.
+                echo "unknown email address";
+               
+            }
+            
+            /*
+             * To find out how to use and react to different status and
+             * substatus codes, see the ZeroBounce documentation at:
+             * https://www.zerobounce.net/docs/?swift#version-2-v2
+             */
+        
+        } catch (\nickdnk\ZeroBounce\APIError $exception) {
+        
+           // Something happened. Perhaps a bad API key or insufficient credit.
+        
+        }
+        
+    }
+
+    public function bubbleSort()
+    {   
+        $arr = [99,18,1,52,61,2,23,65,44,7,6,34];
+         
+        $length = count($arr);
+        $comparisons = 0;
+        for($i = 0; $i <  $length; $i++) { 
+            for ($j = 0; $j < $length - 1 ; $j++) { 
+                $comparisons++;
+                if($arr[$j] > $arr[$j+1]){
+                    $tmp = $arr[$j + 1];
+                    $arr[$j+1] = $arr[$j];
+                    $arr[$j] = $tmp;
+                }
+            }
+        }
+        echo $comparisons."<br>";
+        return $arr;
+        //echo $sorted= bubbleSort($unsorted_arr)."<br>";
+    
     }
 }

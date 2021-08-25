@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use Throwable;
+use Exception;
 use App\Notifications\SlackNotifier;
 use Modules\Employee\Models\Employee;
 use Illuminate\Notifications\Messages\SlackMessage;
@@ -38,8 +38,9 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            Employee::where('email', 'francisigbokwe@ukdioninvestment.com')->first()->notify(new SlackNotifier($e->getMessage()));
+        $this->reportable(function (Exception $e) {
+            // Employee::where('email', 'francisigbokwe@ukdioninvestment.com')
+            // ->first()->notify(new SlackNotifier($e->getMessage()));
         });
     }
 }
